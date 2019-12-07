@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	    <title>支付成功</title>
+	    <script src="http://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
+	    <link href="http://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+	    <script src="http://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+        
+        <!-- reset.css是清楚我页面的默认样式 -->
+	    <link rel="stylesheet" href="css/reset.css">
+	    <!-- 二级页面的公共样式代码 -->
+	    <link rel="stylesheet" href="css/common.css">
+	    <!-- 页面的独有样式 -->
+        <link rel="stylesheet" href="css/index_qinzhu.css">
+<script>
+function formatMoney(num){
+    num = num.toString().replace(/\$|\,/g,''); 
+    if(isNaN(num)) 
+        num = "0"; 
+    sign = (num == (num = Math.abs(num))); 
+    num = Math.floor(num*100+0.50000000001); 
+    cents = num%100; 
+    num = Math.floor(num/100).toString(); 
+    if(cents<10) 
+    cents = "0" + cents; 
+    for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++) 
+    num = num.substring(0,num.length-(4*i+3))+','+ 
+    num.substring(num.length-(4*i+3)); 
+    return (((sign)?'':'-') + num + '.' + cents); 
+}
+function checkEmpty(id, name){
+    var value = $("#"+id).val();
+    if(value.length==0){
+         
+        $("#"+id)[0].focus();
+        return false;
+    }
+    return true;
+}
+ 
+$(function(){
+ 
+    $("a.productDetailTopReviewLink").click(function(){
+        $("div.productReviewDiv").show();
+        $("div.productDetailDiv").hide();
+    });
+    $("a.productReviewTopPartSelectedLink").click(function(){
+        $("div.productReviewDiv").hide();
+        $("div.productDetailDiv").show();      
+    });
+     
+    $("span.leaveMessageTextareaSpan").hide();
+    $("img.leaveMessageImg").click(function(){
+         
+        $(this).hide();
+        $("span.leaveMessageTextareaSpan").show();
+        $("div.orderItemSumDiv").css("height","100px");
+    });
+     
+    $("div#footer a[href$=#nowhere]").click(function(){
+        alert("模仿天猫的连接，并没有跳转到实际的页面");
+    });
+     
+    $("a.wangwanglink").click(function(){
+        alert("模仿旺旺的图标，并不会打开旺旺");
+    });
+    $("a.notImplementLink").click(function(){
+        alert("这个功能没做，蛤蛤~");
+    });
+     
+});
+ 
+</script>
+</head>
+ 
+<body>
+ 
+    <div class="header">
+        <div class="header_c inner_c">
+          <h1 class="logo">
+            青竹商城
+          </h1>
+          <dl class = "allType">
+            <dt><a href="#">查看所有类型</a></dt>
+            <dd>
+              <div class = "dd_inn">
+                <ul class = "dd_cont">
+                  <li><a href="#">不锈钢</a></li>
+                  <li><a href="#">原料水泥</a></li>
+                  <li><a href="#">塑料</a></li>
+                  <li><a href="#">木质</a></li>
+                  <li><a href="#">陶瓷</a></li>
+                </ul>
+                <ul class="pro">
+                  <li>
+                    <a href="#">
+                      <div class="pic">
+                        <img src="images/img25.png" alt="">
+                      </div>
+                      <div class="content">
+                        <h3>简约木质餐盘</h3>
+                        <span>￥200</span>
+                      </div>
+                    </a>
+                    <div class="mask">
+                      <a href="#" class = "btn">查看详情</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic">
+                        <img src="images/img26.png" alt="">
+                      </div>
+                      <div class="content">
+                        <h3>简约木质餐盘</h3>
+                        <span>￥200</span>
+                      </div>
+                    </a>
+                    <div class="mask">
+                      <a href="#" class = "btn">查看详情</a>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pic">
+                        <img src="images/img27.png" alt="">
+                      </div>
+                      <div class="content">
+                        <h3>简约木质餐盘</h3>
+                        <span>￥200</span>
+                      </div>
+                    </a>
+                    <div class="mask">
+                      <a href="#" class = "btn">查看详情</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </dd>
+          </dl>
+          <ul class="nav">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="allproducts.html">所有产品</a></li>
+            <li><a href="blog.html">博客</a></li>
+            <li><a href="article.html">文章列表</a></li>
+          </ul>
+          <a href="#" class="search"></a>
+          <div class="reg">
+            <div class="ico">
+              <span class = "ico_c"></span>
+              <div class="settle">
+                <p class="con">0件商品 共计：<span>￥0</span></p>
+                <a href="cart" class="btn">结算</a>
+              </div>
+              <span class = "con">
+                0
+              </span>
+            </div>
+            <div class = "reg_c">
+              <a href="land.html" id="">登陆</a>
+              <span>&nbsp;|&nbsp;</span>
+              <a href="registe.html">注册</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+ 
+<div class="payedDiv">
+    <div class="payedTextDiv">
+        <img src="http://how2j.cn/tmall/img/site/paySuccess.png">
+        <span>您已成功付款</span>
+         
+    </div>
+    <div class="payedAddressInfo">
+        <ul>
+            <li>收货地址：  </li>
+            <li>实付款：<span class="payedInfoPrice">
+            ￥419.40
+            </li>
+            <li>预计08月08日送达    </li>
+        </ul>
+                 
+        <div class="paedCheckLinkDiv">
+            您可以
+            <a class="payedCheckLink" href="#nowhere">查看已买到的宝贝</a>
+            <a class="payedCheckLink" href="#nowhere">查看交易详情 </a>
+        </div>
+             
+    </div>
+     
+    <div class="payedSeperateLine">
+    </div>
+     
+    <div class="warningDiv">
+        <img src="http://how2j.cn/tmall/img/site/warning.png">
+        <b>安全提醒：</b>下单后，<span class="redColor boldWord">用QQ给您发送链接办理退款的都是骗子！</span>天猫不存在系统升级，订单异常等问题，谨防假冒客服电话诈骗！
+    </div>
+ 
+</div>
+ 
+<div class="modal " id="loginModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog loginDivInProductPageModalDiv">
+            <div class="modal-content">
+                    <div class="loginDivInProductPage">
+                        <div class="loginErrorMessageDiv">
+                            <div class="alert alert-danger" >
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                                <span class="errorMessage"></span>
+                            </div>
+                        </div>
+                             
+                        <div class="login_acount_text">账户登录</div>
+                        <div class="loginInput " >
+                            <span class="loginInputIcon ">
+                                <span class=" glyphicon glyphicon-user"></span>
+                            </span>
+                            <input id="name" name="name" placeholder="手机/会员名/邮箱" type="text">        
+                        </div>
+                         
+                        <div class="loginInput " >
+                            <span class="loginInputIcon ">
+                                <span class=" glyphicon glyphicon-lock"></span>
+                            </span>
+                            <input id="password" name="password"  type="password" placeholder="密码" type="text">          
+                        </div>
+                                    <span class="text-danger">不要输入真实的天猫账号密码</span><br><br>
+                        <div>
+                            <a href="#nowhere">忘记登录密码</a>
+                            <a href="#nowhere" class="pull-right">免费注册</a>
+                        </div>
+                        <div style="margin-top:20px">
+                            <button class="btn btn-block redButton loginSubmitButton" type="button">登录</button>
+                        </div>
+                    </div>   
+          </div>
+    </div>
+</div>
+ 
+<div class="modal" id="deleteConfirmModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog deleteConfirmModalDiv">
+       <div class="modal-content">
+          <div class="modal-header">
+            <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title">确认删除？</h4>
+          </div>
+          <div class="modal-footer">
+            <button data-dismiss="modal" class="btn btn-default" type="button">关闭</button>
+            <button class="btn btn-primary deleteConfirmButton" id="submit" type="button">确认</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+ 
+	<!-- footer部分开始 -->
+	<div class="footer">
+		<div class="footer_c inner_c">
+			<div class="footer_top">
+				<div class="bir">
+					<a href="#">
+						<img src="images/logo.png" alt="">
+					</a>
+					<div class="info">
+						青竹良品原创生活类电商品牌，秉承一贯的严谨态度，我们深入世界各地，从源头全程严格把控商品生产环节，力求帮消费者甄选到最优质的商品，全线采用天然原材料，控制甲醛低量无害，采用进口工艺，国际生产线不断优化，食材保证核心原产地新鲜直供，让你享受品质生活
+					</div>
+				</div>
+				<div class="about">
+					<dl>
+						<dt>
+							<a href="#">
+								关于我们
+							</a>
+						</dt>
+						<dd>
+							<a href="#">
+								我的品牌
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								公司动态
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								经历发展
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								商品推广
+							</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="#">
+								关于我们
+							</a>
+						</dt>
+						<dd>
+							<a href="#">
+								我的品牌
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								公司动态
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								经历发展
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								商品推广
+							</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>
+							<a href="#">
+								关于我们
+							</a>
+						</dt>
+						<dd>
+							<a href="#">
+								我的品牌
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								公司动态
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								经历发展
+							</a>
+						</dd>
+						<dd>
+							<a href="#">
+								商品推广
+							</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="ewm">
+					<p class="wx">
+						<img src="images/img71.png" alt="">
+						<span>微信公众号</span>
+					</p>
+					<p class="wb">
+						<img src="images/img72.png" alt="">
+						<span>微博公众号</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer_bar">
+			<div class="footer_bar_c inner_c">
+				<div class = "pay">
+					<p class = "copy">
+						2019 © youhaosuda.com
+					</p>
+					<p class = "ico">
+						<a href="#">
+							<img src="images/img81.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img82.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img83.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img84.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img85.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img86.png" alt="">
+						</a>
+						<a href="#">
+							<img src="images/img87.png" alt="">
+						</a>
+					</p>
+				</div>
+				<div class="super">
+					<a href="#" class = "pic1">
+						
+					</a>
+					<a href="#" class = "pic2">
+						
+					</a>
+					<a href="#" class = "pic3">
+						
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 返回顶部 -->
+	<div class="lingpin_top">
+		<a href="#" class = "qq">QQ<br/>客服</a>
+		<a href="#" class = "wx">微信<br/>客服</a>
+		<a href="#" class = "top_c">↑</a>
+	</div>
+
+</body>
+</html>

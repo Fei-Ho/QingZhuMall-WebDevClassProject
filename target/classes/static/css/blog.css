@@ -1,0 +1,71 @@
+.s_content{
+	width: 100%;
+	background: #F2F2F2;
+	padding-bottom: 60px;
+}
+.s_content .s_content_c{
+	padding-top: 69px;
+	background: #fff;
+}
+.s_content .s_content_c .s_info{
+	padding: 10px;
+	overflow: hidden;
+}
+.s_content .s_content_c .s_info ul{
+	width: 551px;
+
+}
+.s_content .s_content_c .s_info ul li{
+	border: 1px solid #DDDDDD;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	padding: 17px 33px 0;
+}
+.s_content .s_content_c .s_info ul li .art h5{
+	font-size: 18px;
+	color: #555555;
+	line-height: 50px;
+	font-weight: bold;
+}
+.s_content .s_content_c .s_info ul li .show a:hover{
+	text-decoration: underline;
+}
+.s_content .s_content_c .s_info ul li .art .sub{
+	font-size: 12px;
+	line-height: 24px;
+	color: #AAAAAA;
+}
+.s_content .s_content_c .s_info ul li .data{
+	border-top: 1px solid #ddd;
+	height: 50px;
+	line-height: 50px;
+	color: #AAAAAA;
+}
+.s_content .s_content_c .s_info ul li .data .nickname{
+	float: left;
+	color: #333;
+}
+.s_content .s_content_c .s_info ul li .data .date{
+	float: right;
+}
+.s_content .s_content_c .s_info ul li .data .nickname img{
+	width: 32px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+.s_content .s_content_c .s_info ul li .show{
+	padding: 37px 0;
+}
+.s_content .s_content_c .s_info ul li .show img{
+	width: 100%;
+}
+.s_content .s_content_c .s_info ul li:hover{
+	box-shadow: 0px 0px 8px 3px rgba(0,0,0,.1);
+	transition: all 0.4s ease 0s;
+}
+.s_content .s_content_c .s_info ul.left{
+	float: left;
+}
+.s_content .s_content_c .s_info ul.right{
+	float: right;
+}
