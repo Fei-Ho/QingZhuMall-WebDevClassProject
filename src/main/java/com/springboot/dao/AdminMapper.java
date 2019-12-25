@@ -7,9 +7,6 @@ import org.springframework.stereotype.Repository;
 
 @Mapper
 @Repository
-public interface AdminDao {
-
-    public Admin login(@Param("adminname") String adminname, @Param("password") String password);
-
+public interface AdminMapper {
 
 }

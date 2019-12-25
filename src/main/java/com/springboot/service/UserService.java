@@ -1,37 +1,56 @@
 package com.springboot.service;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import com.springboot.bean.Company;
-import com.springboot.bean.Usertable;
-import com.springboot.dao.CompanyMapper;
-import com.springboot.dao.UsertableMapper;
+import com.springboot.bean.User;
+import com.springboot.dao.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.ArrayList;
 
 @Service
 public class UserService {
-    @Autowired
-    private UsertableMapper usertableMapper;
 
     @Autowired
-    private CompanyMapper companyMapper;
+    private UserMapper userMapper;
 
-    public List<Company> selectAll(){ return companyMapper.selectAll(); }
+    //用户登录
+    public User login(String userName,String password) {
+        return userMapper.login(userName, password);
+    }
 
-    public Company getone(Integer id){ return companyMapper.selectByPrimaryKey(id); }
+    //根据用户名查询用户
+    public User selectByUserName(String userName) {
+        return userMapper.selectByUserName(userName);
+    }
 
-    public List<Usertable> getUsersbyName(String name){ return usertableMapper.listUsersByName(name); }
+    //根据userId查找
+    public User selectByUserId(Integer id) {
+        return userMapper.selectByUserId(id);
+    }
 
-    public Usertable getUser(Integer id){ return usertableMapper.selectByPrimaryKey(id); }
+    //获得所有用户
+    public ArrayList<User> getAll(){
+        return userMapper.getAll();
+    }
 
-    public Integer update(Usertable user){ return usertableMapper.updateByPrimaryKey(user); }
+    //插入用户
+    public int insert(User user) {
+        return userMapper.insert(user);
+    }
 
-    public Integer delete(Integer id){ return usertableMapper.deleteByPrimaryKey(id); }
+    //根据userId删除用户
+    public int deleteById(Integer id) {
+        return userMapper.deleteById(id);
+    }
 
-    public Integer insert(Usertable user){ return usertableMapper.insert(user); }
+    //根据userId更新用户
+    public int updateById(User user) {
+        return userMapper.updateById(user);
+    }
 
-    public Integer getcount(String name){ return usertableMapper.onlineNum(name); }
+    //根据userId选择地更新
+    public int updateByIdSelective(User user) {
+        return userMapper.updateByIdSelective(user);
+    }
 
 }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.dao.UserMapper">
+  <resultMap id="BaseResultMap" type="com.springboot.bean.User">
+      <id column="id" jdbcType="INTEGER" property="id" />
+      <result column="userName" jdbcType="VARCHAR" property="userName" />
+      <result column="password" jdbcType="VARCHAR" property="password" />
+      <result column="name" jdbcType="VARCHAR" property="name" />
+      <result column="age" jdbcType="INTEGER" property="age" />
+      <result column="sex" jdbcType="VARCHAR" property="sex" />
+      <result column="mail" jdbcType="VARCHAR" property="mail" />
+      <result column="phone" jdbcType="VARCHAR" property="phone" />
+  </resultMap>
+
+    <select id="login" resultType="com.springboot.bean.User" parameterType="String">
+        select * from user where user.username=#{userName} and user.password=#{password}
+    </select>
+
+    <select id="selectByUserId" resultType="User" parameterType="Integer">
+        select * from user where user.id=#{id}
+    </select>
+
+    <select id="selectByUserName" resultType="com.springboot.bean.User" parameterType="String">
+        select * from user where user.username=#{userName}
+    </select>
+
+    <select id="getAll" resultType="User">
+        select * from user
+    </select>
+
+    <insert id="insert" parameterType="com.springboot.bean.User">
+        insert into user(id,username,password,age,sex,mail,phone)
+        values(#{id,jdbcType=INTEGER},#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{age,jdbcType=INTEGER},#{sex,jdbcType=VARCHAR},#{mail,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR})
+    </insert>
+
+    <delete id="deleteById" parameterType="Integer">
+        delete from user where user.id = #{id}
+    </delete>
+
+    <update id="updateById" parameterType="com.springboot.bean.User">
+        update user
+        set username = #{userName,jdbcType=VARCHAR},
+        password = #{password,jdbcType=VARCHAR},
+        name = #{name,jdbcType=VARCHAR},
+        age = #{age,jdbcType=INTEGER},
+        sex = #{sex,jdbcType=VARCHAR},
+        mail = #{email,jdbcType=VARCHAR},
+        phone = #{phone,jdbcType=VARCHAR}
+        where userId = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByIdSelective" parameterType="com.springboot.bean.User">
+        update user
+        <set>
+            <if test="username != null">
+                username = #{userName,jdbcType=VARCHAR},
+            </if>
+            <if test="password != null">
+                password = #{password,jdbcType=VARCHAR},
+            </if>
+            <if test="age != null">
+                age = #{age,jdbcType=INTEGER},
+            </if>
+            <if test="sex != null">
+                sex = #{sex,jdbcType=VARCHAR},
+            </if>
+            <if test="mail != null">
+                mail = #{mail,jdbcType=VARCHAR},
+            </if>
+            <if test="phone != null">
+                phone = #{phone,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where id = #{userId,jdbcType=INTEGER}
+    </update>
+
+</mapper>

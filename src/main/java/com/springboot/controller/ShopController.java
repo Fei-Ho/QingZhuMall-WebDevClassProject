@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class ShopController {
 
+    //商城前端页面跳转
     @GetMapping("/")
     public String homepage(){
         return "/shop/index";

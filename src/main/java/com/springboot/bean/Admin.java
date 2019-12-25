@@ -1,11 +1,19 @@
 package com.springboot.bean;
 
+
 public class Admin {
+
     private Integer id;
 
-    private String username;
+    private String adminName;
 
     private String password;
+
+    public Admin(Integer id, String adminName, String password) {
+        this.id = id;
+        this.adminName = adminName;
+        this.password = password;
+    }
 
     public Integer getId() {
         return id;
@@ -15,12 +23,12 @@ public class Admin {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getAdminName() {
+        return adminName;
     }
 
-    public void setUsername(String username) {
-        this.username = username == null ? null : username.trim();
+    public void setAdminName(String adminName) {
+        this.adminName = adminName;
     }
 
     public String getPassword() {
@@ -28,6 +36,6 @@ public class Admin {
     }
 
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+        this.password = password;
     }
 }
