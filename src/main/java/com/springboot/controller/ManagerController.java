@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class ManagerController {
 
-    @GetMapping("/manager/index")
+    @GetMapping("/admin/login")
+    public String login(){
+        return "/manager/login";
+    }
+
+    @GetMapping("/admin")
     public String home(){
         return "/manager/index";
     }
