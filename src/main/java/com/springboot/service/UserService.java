@@ -19,7 +19,7 @@ public class UserService {
     }
 
     //根据用户名查询用户
-    public User selectByUserName(String userName) {
+    public ArrayList<User> selectByUserName(String userName) {
         return userMapper.selectByUserName(userName);
     }
 

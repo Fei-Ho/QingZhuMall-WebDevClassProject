@@ -11,4 +11,8 @@ public class AdminService {
     @Autowired
     private AdminMapper adminMapper;
 
+    public Admin login(String adminName, String password){
+        return adminMapper.login(adminName,password);
+    }
+
 }

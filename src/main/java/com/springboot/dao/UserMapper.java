@@ -9,6 +9,7 @@ import java.util.ArrayList;
 @Mapper
 @Repository
 public interface UserMapper {
+
     //用户登录
     User login(String userName, String password);
 
@@ -16,7 +17,7 @@ public interface UserMapper {
     User selectByUserId(Integer id);
 
     //根据userName查找用户
-    User selectByUserName(String userName);
+    ArrayList<User> selectByUserName(String userName);
 
     //获得所有用户
     ArrayList<User> getAll();

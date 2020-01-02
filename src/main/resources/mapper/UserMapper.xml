@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.springboot.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="com.springboot.bean.User">
-      <id column="id" jdbcType="INTEGER" property="id" />
-      <result column="userName" jdbcType="VARCHAR" property="userName" />
-      <result column="password" jdbcType="VARCHAR" property="password" />
-      <result column="name" jdbcType="VARCHAR" property="name" />
-      <result column="age" jdbcType="INTEGER" property="age" />
-      <result column="sex" jdbcType="VARCHAR" property="sex" />
-      <result column="mail" jdbcType="VARCHAR" property="mail" />
-      <result column="phone" jdbcType="VARCHAR" property="phone" />
-  </resultMap>
+    <resultMap id="userResultMap" type="com.springboot.bean.User">
+        <result property="id" column="id" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="userName" column="username" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="password" column="password" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="age" column="age" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="sex" column="sex" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="mail" column="mail" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="address" column="address" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="create_time" column="create_time" javaType="java.util.Date" jdbcType="TIMESTAMP"></result>
+    </resultMap>
 
     <select id="login" resultType="com.springboot.bean.User" parameterType="String">
         select * from user where user.username=#{userName} and user.password=#{password}
@@ -24,13 +24,13 @@
         select * from user where user.username=#{userName}
     </select>
 
-    <select id="getAll" resultType="User">
+    <select id="getAll" resultType="com.springboot.bean.User">
         select * from user
     </select>
 
     <insert id="insert" parameterType="com.springboot.bean.User">
-        insert into user(id,username,password,age,sex,mail,phone)
-        values(#{id,jdbcType=INTEGER},#{username,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{age,jdbcType=INTEGER},#{sex,jdbcType=VARCHAR},#{mail,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR})
+        insert into user(id,username,password,age,sex,mail,phone,address)
+        values(#{id,jdbcType=INTEGER},#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{age,jdbcType=INTEGER},#{sex,jdbcType=VARCHAR},#{mail,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR}})
     </insert>
 
     <delete id="deleteById" parameterType="Integer">
@@ -41,12 +41,13 @@
         update user
         set username = #{userName,jdbcType=VARCHAR},
         password = #{password,jdbcType=VARCHAR},
-        name = #{name,jdbcType=VARCHAR},
         age = #{age,jdbcType=INTEGER},
         sex = #{sex,jdbcType=VARCHAR},
         mail = #{email,jdbcType=VARCHAR},
-        phone = #{phone,jdbcType=VARCHAR}
-        where userId = #{id,jdbcType=INTEGER}
+        phone = #{phone,jdbcType=VARCHAR},
+        address = #{address,jdbcType=VARCHAR},
+        create_time = #{create_time,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=INTEGER}
     </update>
 
     <update id="updateByIdSelective" parameterType="com.springboot.bean.User">
@@ -70,8 +71,11 @@
             <if test="phone != null">
                 phone = #{phone,jdbcType=VARCHAR},
             </if>
+            <if test="address != null">
+                address = #{address,jdbcType=VARCHAR},
+            </if>
         </set>
-        where id = #{userId,jdbcType=INTEGER}
+        where id = #{id,jdbcType=INTEGER}
     </update>
 
 </mapper>

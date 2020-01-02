@@ -1,10 +1,32 @@
 package com.springboot.controller;
 
+import com.springboot.bean.Msg;
+import com.springboot.bean.User;
+import com.springboot.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ShopController {
+
+    @Autowired
+    private UserService userService;
+
+    //用户登录
+    @PostMapping("/login")
+    @ResponseBody
+    public Msg login(@RequestParam("userName") String userName, @RequestParam("password") String password) {
+        User user  = userService.login(userName,password);
+        if(user!=null){
+            return Msg.success();
+        }else{
+            return Msg.fail();
+        }
+    }
 
     //商城前端页面跳转
     @GetMapping("/")

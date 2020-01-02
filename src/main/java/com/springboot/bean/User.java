@@ -1,5 +1,8 @@
 package com.springboot.bean;
 
+import java.sql.Timestamp;
+import java.util.Date;
+
 public class User {
 
     private Integer id;
@@ -9,18 +12,35 @@ public class User {
     private String sex;
     private String mail;
     private String phone;
+    private String address;
+    private Date createtime;
+    private String str_create_time;
+
+    public String getStr_create_time() {
+        return str_create_time;
+    }
+
+    public void setStr_create_time(String str_create_time) {
+        this.str_create_time = str_create_time;
+    }
 
     public User() {
     }
 
-    public User(Integer id, String userName, String password, Integer age, String sex, String mail, String phone) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.age = age;
-        this.sex = sex;
-        this.mail = mail;
-        this.phone = phone;
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public Date getCreatetime() {
+        return createtime;
+    }
+
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getMail() {
