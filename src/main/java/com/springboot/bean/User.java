@@ -16,6 +16,19 @@ public class User {
     private Date createtime;
     private String str_create_time;
 
+    public User(Integer id, String userName, String password, Integer age, String sex, String mail, String phone, String address, Date createtime, String str_create_time) {
+        this.id = id;
+        this.userName = userName;
+        this.password = password;
+        this.age = age;
+        this.sex = sex;
+        this.mail = mail;
+        this.phone = phone;
+        this.address = address;
+        this.createtime = createtime;
+        this.str_create_time = str_create_time;
+    }
+
     public String getStr_create_time() {
         return str_create_time;
     }

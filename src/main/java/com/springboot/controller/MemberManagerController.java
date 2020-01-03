@@ -39,9 +39,10 @@ public class MemberManagerController {
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/adduser")
     @ResponseBody
-    public Msg addUser(User user){
+    public Msg addUser(@RequestBody User user){
         if(userService.insert(user)!=0){
-            return Msg.success();
+            List<User> userList = userService.getAll();
+            return Msg.success().add("users",userList);
         }else{
             return Msg.fail();
         }
@@ -51,9 +52,10 @@ public class MemberManagerController {
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/deleteuser")
     @ResponseBody
-    public Msg addUser(@RequestParam("id") Integer userId){
-        if(userService.deleteById(userId)!=0){
-            return Msg.success();
+    public Msg deleteUser(@RequestBody User user){
+        if(userService.deleteById(user.getId())!=0){
+            List<User> userList = userService.getAll();
+            return Msg.success().add("users",userList);
         }else{
             return Msg.fail();
         }
@@ -63,9 +65,10 @@ public class MemberManagerController {
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/updateuser")
     @ResponseBody
-    public Msg updateUser(User user){
+    public Msg updateUser(@RequestBody User user){
         if(userService.updateByIdSelective(user)!=0){
-            return Msg.success();
+            List<User> userList = userService.getAll();
+            return Msg.success().add("users",userList);
         }else{
             return Msg.fail();
         }
@@ -77,6 +80,10 @@ public class MemberManagerController {
     @ResponseBody
     public Msg searchUser(@RequestParam("username") String username){
         List<User> userList = userService.selectByUserName(username);
+        DateFormat sdf =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        for (User user:userList) {
+            user.setStr_create_time(sdf.format(user.getCreatetime()));
+        }
         return Msg.success().add("users",userList);
     }
 

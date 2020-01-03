@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.dao.ActivityMapper">
+
+    <resultMap id="ActivityResultMap" type="com.springboot.bean.Activity">
+        <result property="id" column="id" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="activityName" column="activity_name" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="activityDetail" column="activity_detail" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="startTime" column="start_time" javaType="Date" jdbcType="TIMESTAMP"></result>
+        <result property="endTime" column="end_time" javaType="Date" jdbcType="TIMESTAMP"></result>
+    </resultMap>
+
+    <select id="selectByActivityId" parameterType="Integer" resultMap="ActivityResultMap">
+        select * from activity_detail where activity_detail.id=#{id}
+    </select>
+
+    <select id="selectByActivityName" resultMap="ActivityResultMap" parameterType="String">
+        select * from activity_detail where activity_detail.activity_name=#{activityName}
+    </select>
+
+    <select id="getAll" resultMap="ActivityResultMap">
+        select * from activity_detail
+    </select>
+
+    <insert id="insert" parameterType="com.springboot.bean.Activity">
+        insert into activity_detail(id,activity_name,activity_detail,start_time,end_time)
+        values(#{id,jdbcType=INTEGER},#{activityName,jdbcType=VARCHAR},#{activityDetail,jdbcType=VARCHAR},#{startTime,jdbcType=TIMESTAMP},#{endTime,jdbcType=TIMESTAMP})
+    </insert>
+
+    <delete id="deleteById" parameterType="Integer">
+        delete from activity_detail where activity_detail.id = #{id}
+    </delete>
+
+    <update id="updateById" parameterType="com.springboot.bean.Activity">
+        update activity_detail
+        set activity_name = #{activityName,jdbcType=VARCHAR},
+        activity_detail = #{activityDetail,jdbcType=VARCHAR},
+        start_time = #{start_time,jdbcType=TIMESTAMP},
+        end_time = #{end_time,jdbcType=TIMESTAMP}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByIdSelective" parameterType="com.springboot.bean.Activity">
+        update activity_detail
+        <set>
+            <if test="activityName != null">
+                activity_name = #{activityName,jdbcType=VARCHAR},
+            </if>
+            <if test="activityDetail != null">
+                activity_detail = #{activityDetail,jdbcType=VARCHAR},
+            </if>
+            <if test="start_time != null">
+                start_time = #{start_time,jdbcType=TIMESTAMP},
+            </if>
+            <if test="end_time != null">
+                end_time = #{end_time,jdbcType=TIMESTAMP}
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>

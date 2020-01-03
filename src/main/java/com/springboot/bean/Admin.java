@@ -9,11 +9,7 @@ public class Admin {
 
     private String password;
 
-    public Admin(Integer id, String adminName, String password) {
-        this.id = id;
-        this.adminName = adminName;
-        this.password = password;
-    }
+
 
     public Integer getId() {
         return id;

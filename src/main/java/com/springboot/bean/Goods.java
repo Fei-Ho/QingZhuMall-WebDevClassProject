@@ -15,8 +15,17 @@ public class Goods {
     private Integer priceOriginal;
     private String picURLone;
     private String picURLtwo;
+    private Integer activityId;
 
-    Goods(){}
+    public Goods(){}
+
+    public Integer getActivityId() {
+        return activityId;
+    }
+
+    public void setActivityId(Integer activityId) {
+        this.activityId = activityId;
+    }
 
     public String getPicURLone() {
         return picURLone;

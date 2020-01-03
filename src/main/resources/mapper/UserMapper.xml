@@ -30,7 +30,7 @@
 
     <insert id="insert" parameterType="com.springboot.bean.User">
         insert into user(id,username,password,age,sex,mail,phone,address)
-        values(#{id,jdbcType=INTEGER},#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{age,jdbcType=INTEGER},#{sex,jdbcType=VARCHAR},#{mail,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR}})
+        values(#{id,jdbcType=INTEGER},#{userName,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR},#{age,jdbcType=INTEGER},#{sex,jdbcType=VARCHAR},#{mail,jdbcType=VARCHAR},#{phone,jdbcType=VARCHAR},#{address,jdbcType=VARCHAR})
     </insert>
 
     <delete id="deleteById" parameterType="Integer">
@@ -53,7 +53,7 @@
     <update id="updateByIdSelective" parameterType="com.springboot.bean.User">
         update user
         <set>
-            <if test="username != null">
+            <if test="userName != null">
                 username = #{userName,jdbcType=VARCHAR},
             </if>
             <if test="password != null">

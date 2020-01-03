@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springboot.dao.OrderMapper">
+
+    <resultMap id="OrderResultMap" type="com.springboot.bean.Order">
+        <result property="id" column="id" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="orderCode" column="order_code" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="userId" column="user_id" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="orderPrice" column="order_price" javaType="Integer" jdbcType="INTEGER"></result>
+        <result property="detail" column="detail" javaType="String" jdbcType="VARCHAR"></result>
+        <result property="gmtCreate" column="gmt_create" javaType="Date" jdbcType="TIMESTAMP"></result>
+    </resultMap>
+
+    <select id="selectByOrderId" parameterType="Integer" resultMap="OrderResultMap">
+        select * from order_detail where order_detail.id=#{id}
+    </select>
+
+    <select id="selectByOrderCode" resultMap="OrderResultMap" parameterType="String">
+        select * from order_detail where order_detail.order_code=#{orderCode}
+    </select>
+
+    <select id="getAll" resultMap="OrderResultMap">
+        select * from order_detail
+    </select>
+
+    <insert id="insert" parameterType="com.springboot.bean.Goods">
+        insert into order_detail(id,order_code,user_id,order_price,detail)
+        values(#{id,jdbcType=INTEGER},#{orderCode,jdbcType=VARCHAR},#{userId,jdbcType=INTEGER},#{orderPrice,jdbcType=INTEGER},#{detail,jdbcType=VARCHAR})
+    </insert>
+
+    <delete id="deleteById" parameterType="Integer">
+        delete from order_detail where order_detail.id = #{id}
+    </delete>
+
+    <update id="updateById" parameterType="com.springboot.bean.Goods">
+        update order_detail
+        set order_code = #{orderCode,jdbcType=VARCHAR},
+        user_id = #{userId,jdbcType=INTEGER},
+        order_price = #{orderPrice,jdbcType=INTEGER},
+        detail = #{detail,jdbcType=VARCHAR}
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+    <update id="updateByIdSelective" parameterType="com.springboot.bean.Goods">
+        update order_detail
+        <set>
+            <if test="orderCode != null">
+                order_code = #{orderCode,jdbcType=VARCHAR},
+            </if>
+            <if test="userId != null">
+                user_id = #{userId,jdbcType=INTEGER},
+            </if>
+            <if test="orderPrice != null">
+                order_price = #{orderPrice,jdbcType=INTEGER},
+            </if>
+            <if test="detail != null">
+                detail = #{detail,jdbcType=VARCHAR}
+            </if>
+        </set>
+        where id = #{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>
