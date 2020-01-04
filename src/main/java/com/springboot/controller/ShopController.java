@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 public class ShopController {
 
@@ -17,14 +20,15 @@ public class ShopController {
     private UserService userService;
 
     //用户登录
-    @PostMapping("/login")
-    @ResponseBody
-    public Msg login(@RequestParam("userName") String userName, @RequestParam("password") String password) {
+    @PostMapping("/userlogin")
+    public String login(String userName, String password, HttpServletResponse response) {
         User user  = userService.login(userName,password);
         if(user!=null){
-            return Msg.success();
+            //Cookie cookie = new Cookie("userName",user.getUserName());
+            response.addHeader("Set-Cookie","userName:"+user.getUserName()+";id:"+user.getId());
+            return "/shop/index";
         }else{
-            return Msg.fail();
+            return "/shop/land";
         }
     }
 

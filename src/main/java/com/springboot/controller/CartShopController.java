@@ -41,6 +41,9 @@ public class CartShopController {
     @ResponseBody
     public Msg getCartsOfUser(@RequestParam("userId") Integer userId){
         List<ShopCart> shopCartList = cartService.selectByUserId(userId);
+        for (ShopCart cart:shopCartList) {
+            cart.setGood(goodsService.selectByGoodsId(cart.getGoodsId()));
+        }
         return Msg.success().add("carts",shopCartList);
     }
 

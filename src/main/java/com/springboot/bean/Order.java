@@ -14,10 +14,18 @@ public class Order {
     private Date gmtCreate;
     private String str_gmtCreate;
 
-    //private List<ShopCart> cartList = new ArrayList<>;//订单对应的购物车数据
+    private List<ShopCart> cartList = new ArrayList<>();//订单对应的购物车数据
     //private List<Goods>
 
     public Order(){};
+
+    public List<ShopCart> getCartList() {
+        return cartList;
+    }
+
+    public void setCartList(List<ShopCart> cartList) {
+        this.cartList = cartList;
+    }
 
     public String getAddress() {
         return address;

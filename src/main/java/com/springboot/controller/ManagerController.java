@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @Controller
@@ -22,13 +23,13 @@ public class ManagerController {
 
     //管理员登录
     @PostMapping("/admin/login")
-    @ResponseBody
-    public Msg login(@RequestParam("adminName") String adminName, @RequestParam("password") String password) {
+    public String login(@RequestParam("adminName") String adminName, @RequestParam("password") String password, HttpServletResponse response) {
         Admin admin = adminService.login(adminName,password);
         if(admin!=null){
-            return Msg.success();
+            response.addHeader("Set-Cookie","adminName:"+admin.getAdminName()+";id:"+admin.getId());
+            return "/manager/index";
         }else{
-            return Msg.fail();
+            return "/manager/login";
         }
     }
 

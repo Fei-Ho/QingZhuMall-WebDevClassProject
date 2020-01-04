@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+
 	<!-- reset.css是清楚我页面的默认样式 -->
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- 二级页面的公共样式代码 -->
@@ -105,11 +106,11 @@
 	<div class="login">
 		<div class="main">
 			<h2>登录</h2>
-			<form action="#">
+			<form method="post" action="http://192.168.43.164:8080/qingzhu/userlogin">
 				<!-- 用户名 type属性值是text指的是文本框-->
-				<input type="text" placeholder="手机/邮箱/用户名" class = "in1" >
+				<input name="userName" type="text" placeholder="手机/邮箱/用户名" class = "in1" >
 				<!-- 密码 type属性值是password指的是密码框-->
-				<input type="password" placeholder="登录密码">
+				<input name="password" type="password" placeholder="登录密码">
 				<!-- 注册和忘记密码 -->
 				<p>
 					<a href="registe" class = "l">
@@ -120,7 +121,7 @@
 					</a>
 				</p>
 				<!-- input的type值如果是button，指的是按钮 -->
-				<input type="button" value = "登陆" class = "btn_d">
+				<input type="submit" onclick="" value = "登陆" class = "btn_d">
 				<input type="button" value = "用短信登陆" class = "btn_p">
 			</form>
 			<div class = "acc">

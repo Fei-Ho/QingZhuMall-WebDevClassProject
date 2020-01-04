@@ -15,18 +15,23 @@ public class User {
     private String address;
     private Date createtime;
     private String str_create_time;
+    private String address2;
+    private String address3;
 
-    public User(Integer id, String userName, String password, Integer age, String sex, String mail, String phone, String address, Date createtime, String str_create_time) {
-        this.id = id;
-        this.userName = userName;
-        this.password = password;
-        this.age = age;
-        this.sex = sex;
-        this.mail = mail;
-        this.phone = phone;
-        this.address = address;
-        this.createtime = createtime;
-        this.str_create_time = str_create_time;
+    public String getAddress2() {
+        return address2;
+    }
+
+    public void setAddress2(String address2) {
+        this.address2 = address2;
+    }
+
+    public String getAddress3() {
+        return address3;
+    }
+
+    public void setAddress3(String address3) {
+        this.address3 = address3;
     }
 
     public String getStr_create_time() {

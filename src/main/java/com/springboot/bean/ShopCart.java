@@ -1,8 +1,11 @@
 package com.springboot.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class ShopCart {
+
     private Integer id;
     private Integer userId;
     private Integer goodsId;
@@ -11,6 +14,7 @@ public class ShopCart {
     private Date gmtCreate;
     private Date gmtModified;
     private String str_gmtCreate;
+    private Goods goods;//购物车对应的商品信息
 
     //联表查询得到购物车记录对应的商品详细信息
     private Goods good;

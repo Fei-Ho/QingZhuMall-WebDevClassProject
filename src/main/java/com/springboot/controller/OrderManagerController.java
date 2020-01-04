@@ -4,6 +4,9 @@ package com.springboot.controller;
 import com.springboot.bean.Goods;
 import com.springboot.bean.Msg;
 import com.springboot.bean.Order;
+import com.springboot.bean.ShopCart;
+import com.springboot.service.CartService;
+import com.springboot.service.GoodsService;
 import com.springboot.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,12 +21,27 @@ public class OrderManagerController {
     @Autowired
     OrderService orderService;
 
+    @Autowired
+    CartService cartService;
+
+    @Autowired
+    GoodsService goodsService;
+
     //获取所有订单
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @GetMapping("/admin/getallorders")
     @ResponseBody
     public Msg getAllOrders() {
         List<Order> ordersList = orderService.getAll();
+        //将订单的所有购物网条目取出
+        for (Order order:ordersList) {
+            String[] cartIds = order.getDetail().split(",");
+            for(int i=0;i<cartIds.length;i++){
+                ShopCart cart = cartService.selectByCartId(Integer.parseInt(cartIds[i]));
+                cart.setGood(goodsService.selectByGoodsId(cart.getGoodsId()));
+                order.getCartList().add(cart);
+            }
+        }
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for (Order order:ordersList) {
             order.setStr_gmtCreate(sdf.format(order.getGmtCreate()));
@@ -82,13 +100,20 @@ public class OrderManagerController {
         }
     }
 
-    //查找订单
+    //根据订单Id查订单
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
-    @PostMapping("/admin/searchorder")
+    @GetMapping("/admin/searchorder")
     @ResponseBody
-    public Msg searchOrder(@RequestParam("orderCode") String orderCode){
-        List<Order> ordersList = orderService.selectByOrderCode(orderCode);
-        return Msg.success().add("orders",ordersList);
+    public Msg searchOrderById(@RequestParam("orderId") Integer orderId){
+        Order order = orderService.selectByOrderId(orderId);
+        //将订单的所有购物网条目取出
+        String[] cartIds = order.getDetail().split(",");
+        for(int i=0;i<cartIds.length;i++){
+            ShopCart cart = cartService.selectByCartId(Integer.parseInt(cartIds[i]));
+            cart.setGood(goodsService.selectByGoodsId(cart.getGoodsId()));
+            order.getCartList().add(cart);
+        }
+        return Msg.success().add("order",order);
     }
 
     //根据userId获得该用户的所有订单
@@ -97,7 +122,15 @@ public class OrderManagerController {
     @ResponseBody
     public Msg searchOrder(@RequestParam("userId") Integer userId){
         List<Order> ordersList = orderService.selectByUserId(userId);
-        //String[] ids =
+        //将订单的所有购物网条目取出
+        for (Order order:ordersList) {
+            String[] cartIds = order.getDetail().split(",");
+            for(int i=0;i<cartIds.length;i++){
+                ShopCart cart = cartService.selectByCartId(Integer.parseInt(cartIds[i]));
+                cart.setGood(goodsService.selectByGoodsId(cart.getGoodsId()));
+                order.getCartList().add(cart);
+            }
+        }
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for (Order order: ordersList) {
             order.setStr_gmtCreate(sdf.format(order.getGmtCreate()));

@@ -2,6 +2,7 @@ package com.springboot.dao;
 
 import com.springboot.bean.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 public interface UserMapper {
 
     //用户登录
-    User login(String userName, String password);
+    User login(@Param("userName") String userName, @Param("password") String password);
 
     //根据userId查找
     User selectByUserId(Integer id);

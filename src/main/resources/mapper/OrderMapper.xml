@@ -21,7 +21,7 @@
     </select>
 
     <select id="getAll" resultMap="OrderResultMap">
-        select * from order_detail AND goods_detail
+        select * from order_detail
     </select>
 
     <insert id="insert" parameterType="com.springboot.bean.Goods">
