@@ -25,4 +25,8 @@ public interface GoodsMapper {
     int updateById(Goods goods);
 
     int updateByIdSelective(Goods goods);
+
+    ArrayList<Goods> selectByActivityId(Integer activityId);
+
+    int addGood2Activity(Integer goodsId,Integer activityId);
 }

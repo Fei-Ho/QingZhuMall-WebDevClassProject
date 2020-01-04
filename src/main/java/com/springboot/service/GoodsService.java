@@ -43,4 +43,12 @@ public class GoodsService {
         return goodsMapper.updateByIdSelective(goods);
     }
 
+    //根据活动id查询所有属于这个互动的商品
+    public ArrayList<Goods> selectByActivityId(Integer activityId){
+        return goodsMapper.selectByActivityId(activityId);
+    }
+
+    public int addGood2Activity(Integer goodsId,Integer activityId){
+        return goodsMapper.addGood2Activity(goodsId,activityId);
+    }
 }

@@ -35,8 +35,8 @@
         update activity_detail
         set activity_name = #{activityName,jdbcType=VARCHAR},
         activity_detail = #{activityDetail,jdbcType=VARCHAR},
-        start_time = #{start_time,jdbcType=TIMESTAMP},
-        end_time = #{end_time,jdbcType=TIMESTAMP}
+        start_time = #{startTime,jdbcType=TIMESTAMP},
+        end_time = #{endTime,jdbcType=TIMESTAMP}
         where id = #{id,jdbcType=INTEGER}
     </update>
 
@@ -49,11 +49,11 @@
             <if test="activityDetail != null">
                 activity_detail = #{activityDetail,jdbcType=VARCHAR},
             </if>
-            <if test="start_time != null">
-                start_time = #{start_time,jdbcType=TIMESTAMP},
+            <if test="startTime != null">
+                start_time = #{startTime,jdbcType=TIMESTAMP},
             </if>
-            <if test="end_time != null">
-                end_time = #{end_time,jdbcType=TIMESTAMP}
+            <if test="endTime != null">
+                end_time = #{endTime,jdbcType=TIMESTAMP}
             </if>
         </set>
         where id = #{id,jdbcType=INTEGER}

@@ -26,4 +26,7 @@ public interface OrderMapper {
     int updateById(Order order);
 
     int updateByIdSelective(Order order);
+
+    //根据userId获得该用户的所有订单
+    ArrayList<Order> selectByUserId(Integer id);
 }

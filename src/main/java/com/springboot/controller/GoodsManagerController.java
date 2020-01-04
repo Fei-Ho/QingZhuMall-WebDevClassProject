@@ -106,7 +106,7 @@ public class GoodsManagerController {
     @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping(value = "/admin/imgupload")
     @ResponseBody
-    public Msg imgUpload(@RequestParam(value = "img", required = false) MultipartFile file, HttpServletRequest request) {
+    public Msg imgUpload(@RequestParam(value="img",required = false) MultipartFile file, HttpServletRequest request) {
         if (file.isEmpty()) {
             System.out.println("文件为空");
             return Msg.fail();
@@ -134,7 +134,7 @@ public class GoodsManagerController {
             String destDir = "E:"+File.separator+"IntellijProject"+File.separator+"qingzhu_mall"+File.separator+"src"+File.separator+"main"+File.separator+"resources"+File.separator+"static"+File.separator+"upload"+File.separator+"imgs"+File.separator;
             copyFile(src,destDir,fileName);
             //将图片url写入数据库
-            String url = "/upload/imgs/" + fileName;
+            String url = "/qingzhu/upload/imgs/" + fileName;
             Goods good = new Goods();
             good.setId(Integer.parseInt(request.getParameter("id")));
             good.setPicURLone(url);
@@ -142,6 +142,18 @@ public class GoodsManagerController {
             return Msg.success();
         } catch (IOException e) {
             e.printStackTrace();
+            return Msg.fail();
+        }
+    }
+
+    //将商品添加进某个活动
+    @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/admin/goodaddtoact")
+    @ResponseBody
+    public Msg goodAddToAct(@RequestParam("goodId") Integer goodId,@RequestParam("activityId") Integer activityId) {
+        if(goodsService.addGood2Activity(goodId,activityId)!=0){
+            return Msg.success();
+        }else{
             return Msg.fail();
         }
     }
@@ -167,4 +179,7 @@ public class GoodsManagerController {
         in.close();
         out.close();
     }
+
+
+
 }

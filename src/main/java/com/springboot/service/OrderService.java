@@ -43,4 +43,7 @@ public class OrderService {
         return orderMapper.updateByIdSelective(order);
     }
 
+    public ArrayList<Order> selectByUserId(Integer userId){
+        return orderMapper.selectByUserId(userId);
+    }
 }

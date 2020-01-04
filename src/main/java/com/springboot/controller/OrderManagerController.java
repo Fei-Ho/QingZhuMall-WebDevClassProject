@@ -91,4 +91,16 @@ public class OrderManagerController {
         return Msg.success().add("orders",ordersList);
     }
 
+    //根据userId获得该用户的所有订单
+    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
+    @GetMapping("/admin/orderofuser")
+    @ResponseBody
+    public Msg searchOrder(@RequestParam("userId") Integer userId){
+        List<Order> ordersList = orderService.selectByUserId(userId);
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        for (Order order: ordersList) {
+            order.setStr_gmtCreate(sdf.format(order.getGmtCreate()));
+        }
+        return Msg.success().add("orders",ordersList);
+    }
 }

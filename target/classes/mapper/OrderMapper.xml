@@ -60,4 +60,8 @@
         where id = #{id,jdbcType=INTEGER}
     </update>
 
+    <select id="selectByUserId" resultMap="OrderResultMap" parameterType="Integer">
+        select * from order_detail WHERE user_id = #{userId,jdbcType=INTEGER}
+    </select>
+
 </mapper>

@@ -14,7 +14,6 @@
         <result property="priceOriginal" column="price_original" javaType="Integer" jdbcType="INTEGER"></result>
         <result property="picURLone" column="picURLone" javaType="String" jdbcType="VARCHAR"></result>
         <result property="picURLtwo" column="picURLtwo" javaType="String" jdbcType="VARCHAR"></result>
-        <result property="activityId" column="activity_id" javaType="Integer" jdbcType="INTEGER"></result>
     </resultMap>
 
     <select id="selectByGoodsId" resultType="Goods" parameterType="Integer">
@@ -31,7 +30,7 @@
 
     <insert id="insert" parameterType="com.springboot.bean.Goods">
         insert into goods_detail(id,goods_name,type,goods_price,goods_stock,goods_sold,detail,price_original,picURLone,picURLtwo,activity_id)
-        values(#{id,jdbcType=INTEGER},#{goodsName,jdbcType=VARCHAR},#{type,jdbcType=INTEGER},#{goodsPrice,jdbcType=INTEGER},#{goodsStock,jdbcType=INTEGER},#{goodsSold,jdbcType=INTEGER},#{detail,jdbcType=VARCHAR},#{priceOriginal,jdbcType=INTEGER},#{picURLone,jdbcType=VARCHAR},#{picURLtwo,jdbcType=VARCHAR},#{activityId,jdbcType=INTEGER})
+        values(#{id,jdbcType=INTEGER},#{goodsName,jdbcType=VARCHAR},#{type,jdbcType=INTEGER},#{goodsPrice,jdbcType=INTEGER},#{goodsStock,jdbcType=INTEGER},#{goodsSold,jdbcType=INTEGER},#{detail,jdbcType=VARCHAR},#{priceOriginal,jdbcType=INTEGER},#{picURLone,jdbcType=VARCHAR},#{picURLtwo,jdbcType=VARCHAR})
     </insert>
 
     <delete id="deleteById" parameterType="Integer">
@@ -49,7 +48,6 @@
         price_original = #{priceOriginal,jdbcType=INTEGER}
         picURLone = #{picURLone,jdbcType=VARCHAR},
         picURLtwo = #{picURLtwo,jdbcType=VARCHAR}
-        activity_id = #{activityId,jdbcType=INTEGER}
         where id = #{id,jdbcType=INTEGER}
     </update>
 
@@ -83,11 +81,12 @@
             <if test="picURLtwo != null">
                 picURLtwo = #{picURLtwo,jdbcType=VARCHAR},
             </if>
-            <if test="activityId != null">
-                activity_id = #{activityId,jdbcType=VARCHAR},
-            </if>
         </set>
         where id = #{id,jdbcType=INTEGER}
     </update>
+
+    <select id="selectByActivityId" resultType="com.springboot.bean.Goods" parameterType="Integer">
+        select goods_detail.id,goods_name,`type`,goods_price,goods_stock,goods_sold,detail,create_time,price_original,picURLone,picURLtwo from goods_detail, activity_goods where activity_goods.activity_id=#{activityId,jdbcType=INTEGER} and goods_detail.id = activity_goods.goods_id;
+    </select>
 
 </mapper>
