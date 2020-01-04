@@ -104,6 +104,15 @@ public class GoodsManagerController {
         return Msg.success().add("users", goodsList);
     }
 
+    //查找商品ById
+    @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/admin/getgoodbyid")
+    @ResponseBody
+    public Msg searchGoodId(@RequestParam("goodId") Integer goodId) {
+        Goods goods = goodsService.selectByGoodsId(goodId);
+        return Msg.success().add("good", goods);
+    }
+
     //上传商品图片-1
     @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping(value = "/admin/imgupload")

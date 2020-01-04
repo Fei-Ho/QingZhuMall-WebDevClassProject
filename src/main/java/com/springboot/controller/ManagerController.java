@@ -7,11 +7,9 @@ import com.springboot.service.AdminService;
 import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
@@ -22,14 +20,21 @@ public class ManagerController {
     private AdminService adminService;
 
     //管理员登录
+    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/login")
-    public String login(String adminName,String password, HttpServletResponse response) {
+    @ResponseBody
+    public Msg login(String adminName,String password, HttpServletResponse response) {
         Admin admin = adminService.login(adminName,password);
         if(admin!=null){
-            response.addHeader("Set-Cookie","adminName:"+admin.getAdminName()+";id:"+admin.getId());
-            return "/manager/index";
+            Cookie cookie = new Cookie("adminName",admin.getAdminName());
+            //cookie.setDomain("/");
+            response.addCookie(cookie);
+            Cookie cookie1 = new Cookie("adminId",admin.getId().toString());
+            //cookie1.setDomain("/");
+            response.addCookie(cookie1);
+            return Msg.success();
         }else{
-            return "/manager/login";
+            return Msg.fail();
         }
     }
 
@@ -152,5 +157,10 @@ public class ManagerController {
     @GetMapping("/admin_info")
     public String admin_info(){
         return "/manager/admin_info";
+    }
+
+    @GetMapping("/Connects")
+    public String adminConnects(){
+        return "/manager/Connects";
     }
 }

@@ -1,0 +1,108 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+}
+.outer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 68px;
+    background-color: #FFFFFF;
+    z-index: 99;
+    /*margin: 0 auto;*/
+}
+.inter{
+    width: 1140px;
+    height: 68px;
+    background-color: #FFFFFF;
+    /*background-color: gainsboro;*/
+    margin: 0 auto;
+}
+.inter .logo{
+    float: left;
+    width: 162px;
+    height: 100%;
+    text-align: center;
+}
+.inter .logo img{
+    width: 110px;
+    margin: 20px auto;
+    height: 27.88px;
+    line-height: 27.88px;
+}
+.inter ul li{
+    float: left;
+    list-style: none;
+    padding: 0 28px;
+    height: 68px;
+    line-height: 68px;
+}
+.inter ul li:hover{
+    background-color: #E6D6C6;
+}
+.inter ul li a{
+    font-size: 14px;
+    color: #333;
+}
+.inter .sousuo{
+    margin-left: 150px;
+    height: 68px;
+    line-height: 68px;
+    color: #555;
+}
+.inter .inter_right{
+    float: right;
+}
+.inter .inter_right a{
+    font-size: 14px;
+    color: #555;
+    height: 68px;
+    line-height: 68px;
+    padding: 10px;
+}
+.outer .picture{
+    display: block;
+    height: 100%;
+    width: 100%;
+
+}
+.picture img{
+    margin: 0 auto;
+    height: 421.56px;
+    margin-top: 68px;
+}
+.outer .shop{
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    width: 250px;
+    height: 100px;
+    background-color: #F2F2F2;
+    border: 1px solid #cccccc;
+    display: none;
+}
+.outer .shop p{
+    width: 230px;
+    line-height: 42px;
+    font-size: 14px;
+    text-align: center;
+}
+.outer .shop .shop1{
+    width: 230px;
+    height: 40px;
+    line-height: 40px;
+    background-color:  #c78a49;
+    font-size: 20px;
+    text-align: center;
+
+}
+.outer .shop .shop1 a{
+    color: #fff;
+}

@@ -51,9 +51,13 @@ public class CartShopController {
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/addcart")
     @ResponseBody
-    public Msg addCart(ShopCart shopCart){
-        Goods good = goodsService.selectByGoodsId(shopCart.getGoodsId());
-        shopCart.setTotalPrice((double)good.getGoodsPrice()*shopCart.getGoodsNum());
+    public Msg addCart(@RequestBody ShopCart shopCart){
+        System.out.println(shopCart.getUserId());
+        System.out.println(shopCart.getGoodsNum());
+        System.out.println(shopCart.getTotalPrice());
+        System.out.println(shopCart.getGoodsId());
+        //Goods good = goodsService.selectByGoodsId(shopCart.getGoodsId());
+        //shopCart.setTotalPrice((double)good.getGoodsPrice()*shopCart.getGoodsNum());
         if(cartService.insert(shopCart)!=0){
             return Msg.success();
         }else{

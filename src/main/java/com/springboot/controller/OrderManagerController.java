@@ -13,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -54,6 +55,7 @@ public class OrderManagerController {
     @PostMapping("/admin/addorder")
     @ResponseBody
     public Msg addOrder(@RequestBody Order order){
+        order.setOrderCode(String.valueOf(new Date().getTime()));
         if(orderService.insert(order)!=0){
             List<Order> ordersList = orderService.getAll();
             DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

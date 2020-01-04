@@ -5,10 +5,7 @@ import com.springboot.bean.User;
 import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -20,15 +17,21 @@ public class ShopController {
     private UserService userService;
 
     //用户登录
+    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/userlogin")
-    public String login(String userName, String password, HttpServletResponse response) {
+    @ResponseBody
+    public Msg login(String userName, String password, HttpServletResponse response) {
         User user  = userService.login(userName,password);
         if(user!=null){
-            //Cookie cookie = new Cookie("userName",user.getUserName());
-            response.addHeader("Set-Cookie","userName:"+user.getUserName()+";id:"+user.getId());
-            return "/shop/index";
+            Cookie cookie = new Cookie("userName",user.getUserName());
+            //cookie.setDomain("/");
+            response.addCookie(cookie);
+            Cookie cookie1 = new Cookie("userId",user.getId().toString());
+            //cookie1.setDomain("/");
+            response.addCookie(cookie1);
+            return Msg.success();
         }else{
-            return "/shop/land";
+            return Msg.fail();
         }
     }
 
@@ -83,4 +86,8 @@ public class ShopController {
         return "/shop/ok";
     }
 
+    @GetMapping("/goodsDetail")
+    public String gooddetail(){
+        return "/shop/goodsDetail";
+    }
 }

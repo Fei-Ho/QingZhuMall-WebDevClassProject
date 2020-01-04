@@ -6,27 +6,13 @@
 	<!-- 外链index.CSS文件 -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/index_qinzhu.css">
-	<script src="manager_static/assets/js/jquery.min.js"></script>
+	<script src="manager_static/vue.js"></script>
+	<script src="manager_static/js/ajax.js" type="text/javascript"></script>
+	<script src="manager_static/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="manager_static/Widget/zTree/js/jquery.ztree.all-3.5.min.js"></script>
 </head>
-
-<script>
-	function onload(){
-		// 如果找到了索引，就代表cookie存在，
-		// 反之，就说明不存在。
-		if (true)
-		{   var strCookie = document.cookie;
-			var arrCookie = strCookie.split(";");
-			var userid = 'null';
-			console.log(arrCookie);
-			for(var i = 0;i<arrCookie.length;i++){
-				var arr = arrCookie[i].split(":");
-				if("userName"==arr[0]){
-					userid = arr[1];
-					$("#login").html(userid);
-					break;}}}}
-</script>
-
-<body onload="onload()">
+<body>
+<div id="app">
 	<!-- header部分开始 -->
 	<div class="header">
 		<div class="header_c inner_c">
@@ -45,46 +31,18 @@
 							<li><a href="#">陶瓷</a></li>
 						</ul>
 						<ul class="pro">
-							<li>
+							<li v-for="(item,index) in headList">
 								<a href="#">
 									<div class="pic">
-										<img src="images/img25.png" alt="">
+										<img :src="item.picURLone" alt="">
 									</div>
 									<div class="content">
-										<h3>简约木质餐盘</h3>
-										<span>￥200</span>
+										<h3>{{item.goodsName}}</h3>
+										<span>￥{{item.goodsPrice}}</span>
 									</div>
 								</a>
 								<div class="mask">
-									<a href="#" class = "btn">查看详情</a>
-								</div>
-							</li>
-							<li>
-								<a href="#">
-									<div class="pic">
-										<img src="images/img26.png" alt="">
-									</div>
-									<div class="content">
-										<h3>简约木质餐盘</h3>
-										<span>￥200</span>
-									</div>
-								</a>
-								<div class="mask">
-									<a href="#" class = "btn">查看详情</a>
-								</div>
-							</li>
-							<li>
-								<a href="#">
-									<div class="pic">
-										<img src="images/img27.png" alt="">
-									</div>
-									<div class="content">
-										<h3>简约木质餐盘</h3>
-										<span>￥200</span>
-									</div>
-								</a>
-								<div class="mask">
-									<a href="#" class = "btn">查看详情</a>
+									<div class = "btn" @click="showDetail(index,0)" style="cursor:pointer;">查看详情</div>
 								</div>
 							</li>
 						</ul>
@@ -110,7 +68,7 @@
 					</span>
 				</div>
 				<div class = "reg_c">
-					<a href="land.html" id="login">登陆</a>
+					<a href="land.html" id="">登陆</a>
 					<span>&nbsp;|&nbsp;</span>
 					<a href="registe.html">注册</a>
 				</div>
@@ -143,41 +101,14 @@
 				<div class="pro_pic">
 					<div class="pro_c">
 						<ul>
-							<li>
-								<a href="#">
-									<img src="images/img23.png" alt="">
-									<div class="cont">
-										<h3>黑陶自然花香蜡烛</h3>
-										 <span>￥300</span>
+							<li v-for="(item,index) in body1">
+								<div @click="showDetail(index,1)">
+									<img :src="item.picURLone" alt="">
+									<div class="cont" style="cursor:pointer;">
+										<h3>{{item.goodsName}}</h3>
+										<span>￥{{item.goodsPrice}}</span>
 									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="images/img24.png" alt="">
-									<div class="cont">
-										<h3>黑陶自然花香蜡烛</h3>
-										 <span>￥300</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="images/img25.png" alt="">
-									<div class="cont">
-										<h3>黑陶自然花香蜡烛</h3>
-										 <span>￥300</span>
-									</div>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<img src="images/img26.png" alt="">
-									<div class="cont">
-										<h3>黑陶自然花香蜡烛</h3>
-										 <span>￥300</span>
-									</div>
-								</a>
+								</div>
 							</li>
 						</ul>
 					</div>
@@ -228,61 +159,18 @@
 							</a>
 							<div class="mask"></div>
 						</li>
-						<li>
-							<a href="#">
-								<img src="images/img41.png" alt="">
+						<li v-for="(item,index) in body2">
+							<div>
+								<img :src="item.picURLone" alt="">
 								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
+									<h3>{{item.goodsName}}</h3>
+									<span>￥{{item.goodsPrice}}</span>
 								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
 							</div>
-						</li>
-						
-						<li>
-							<a href="#">
-								<img src="images/img42.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
-								</div>
-							</a>
 							<div class="mask">
-								<a href="#" class = "btn">
+								<div @click="showDetail(index,2)" class = "btn" style="cursor:pointer;">
 									查看详情
-								</a>
-							</div>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/img43.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
 								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
-							</div>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/img44.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
-								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
 							</div>
 						</li>
 					</ul>
@@ -294,61 +182,18 @@
 							<div class="mask">
 							</div>
 						</li>
-						<li>
-							<a href="#">
-								<img src="images/img46.png" alt="">
+						<li v-for="(item,index) in body3">
+							<div>
+								<img :src="item.picURLone" alt="">
 								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
+									<h3>{{item.goodsName}}</h3>
+									<span>￥{{item.goodsPrice}}</span>
 								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
 							</div>
-						</li>
-						
-						<li>
-							<a href="#">
-								<img src="images/img47.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
-								</div>
-							</a>
 							<div class="mask">
-								<a href="#" class = "btn">
+								<div @click="showDetail(index,3)"  class = "btn" style="cursor:pointer;">
 									查看详情
-								</a>
-							</div>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/img48.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
 								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
-							</div>
-						</li>
-						<li>
-							<a href="#">
-								<img src="images/img49.png" alt="">
-								<div class="cont">
-									<h3>简约时尚水泥花瓶</h3>
-									<span>￥450</span>
-								</div>
-							</a>
-							<div class="mask">
-								<a href="#" class = "btn">
-									查看详情
-								</a>
 							</div>
 						</li>
 					</ul>
@@ -676,13 +521,13 @@
 				</div>
 				<div class="super">
 					<a href="#" class = "pic1">
-						
+
 					</a>
 					<a href="#" class = "pic2">
-						
+
 					</a>
 					<a href="#" class = "pic3">
-						
+
 					</a>
 				</div>
 			</div>
@@ -694,5 +539,83 @@
 		<a href="#" class = "wx">微信<br/>客服</a>
 		<a href="#" class = "top_c">↑</a>
 	</div>
+</div>
 </body>
+<script>
+	var vm = new Vue({
+		el: "#app",
+		data:{
+		    productList:[],
+			headList: [],
+			body1: [],
+			body2: [],
+			body3: []
+		},
+		created: function(){
+		    this.updateMsg();
+		},
+		methods:{
+		    updateMsg: function(){
+                var that = this;
+                $.ajax({
+                    type: "GET",//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: "http://192.168.43.164:8080/qingzhu/admin/getallgoods" ,//url
+                    success: function (result) {
+                        var productList = result.extend.goods;
+                        for(var i=0;i<productList.length;i++){
+                            productList[i].picURLone = "http://192.168.43.164:8080"+productList[i].picURLone;
+						}
+						var headList = [];
+                        for(var i=0;i<3;i++){
+                            var index = i%productList.length
+                            headList.push(JSON.parse(JSON.stringify(productList[index])));
+						}
+                        var body1 = [];
+                        for(var i=3;i<7;i++){
+                            var index = i%productList.length
+                            body1.push(JSON.parse(JSON.stringify(productList[index])));
+                        }
+                        var body2 = [];
+                        for(var i=7;i<11;i++){
+                            var index = i%productList.length
+                            body2.push(JSON.parse(JSON.stringify(productList[index])));
+                        }
+                        var body3 = [];
+                        for(var i=11;i<15;i++){
+                            var index = i%(productList.length)
+                            body3.push(JSON.parse(JSON.stringify(productList[index])));
+                        }
+
+                        that.headList = headList;
+                        that.body1 = body1;
+                        that.body2 = body2;
+                        that.body3 = body3;
+
+                    },
+                    error : function() {
+                        alert("异常！");
+                    }
+                });
+			},
+			showDetail: function(index,list){
+		        var that = this;
+		        var id;
+		        if(list == 0){
+		            id = that.headList[index].id;
+				}
+				else if(list == 1){
+		            id = that.body1[index].id
+				}
+				else if(list == 2){
+		            id = that.body2[index].id
+				}
+				else{
+		            id = that.body3[index].id
+				}
+                window.location.href = "goodsDetail.html?value=" + id;
+			}
+		}
+	})
+</script>
 </html>

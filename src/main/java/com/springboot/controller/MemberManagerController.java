@@ -65,7 +65,9 @@ public class MemberManagerController {
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/updateuser")
     @ResponseBody
-    public Msg updateUser(@RequestBody User user){
+    public Msg updateUser(User user){
+        System.out.println(user.getId());
+        System.out.println(user.getAddress2());
         if(userService.updateByIdSelective(user)!=0){
             List<User> userList = userService.getAll();
             return Msg.success().add("users",userList);
@@ -87,4 +89,14 @@ public class MemberManagerController {
         return Msg.success().add("users",userList);
     }
 
+    //查找用户ById
+    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/admin/getuserbyid")
+    @ResponseBody
+    public Msg searchUserById(@RequestParam("userId") Integer userId){
+        User user = userService.selectByUserId(userId);
+        DateFormat sdf =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        user.setStr_create_time(sdf.format(user.getCreatetime()));
+        return Msg.success().add("user",user);
+    }
 }
