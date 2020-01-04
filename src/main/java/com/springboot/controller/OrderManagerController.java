@@ -97,6 +97,7 @@ public class OrderManagerController {
     @ResponseBody
     public Msg searchOrder(@RequestParam("userId") Integer userId){
         List<Order> ordersList = orderService.selectByUserId(userId);
+        //String[] ids =
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         for (Order order: ordersList) {
             order.setStr_gmtCreate(sdf.format(order.getGmtCreate()));

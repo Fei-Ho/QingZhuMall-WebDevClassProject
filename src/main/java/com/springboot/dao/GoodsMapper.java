@@ -4,6 +4,7 @@ package com.springboot.dao;
 import com.springboot.bean.Goods;
 import com.springboot.bean.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public interface GoodsMapper {
 
     ArrayList<Goods> selectByActivityId(Integer activityId);
 
-    int addGood2Activity(Integer goodIds,Integer activityId);
+    int addGood2Activity(@Param("goodIds")Integer goodIds,@Param("activityId")Integer activityId);
 
-    int rmvGoodFromAct(Integer goodsId,Integer activityId);
+    int rmvGoodFromAct(@Param("goodsId") Integer goodsId, @Param("activityId") Integer activityId);
 }

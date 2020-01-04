@@ -1,24 +1,16 @@
 package com.springboot.bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AddAct {
-    private List<Integer> goodIds;
-    private Integer activityId;
+    private ArrayList<Integer> goodIds;
 
-    public List<Integer> getGoodIds() {
+    public ArrayList<Integer> getGoodIds() {
         return goodIds;
     }
 
-    public void setGoodIds(List<Integer> goodIds) {
+    public void setGoodIds(ArrayList<Integer> goodIds) {
         this.goodIds = goodIds;
-    }
-
-    public Integer getActivityId() {
-        return activityId;
-    }
-
-    public void setActivityId(Integer activityId) {
-        this.activityId = activityId;
     }
 }

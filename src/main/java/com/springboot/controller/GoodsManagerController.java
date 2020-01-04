@@ -152,13 +152,13 @@ public class GoodsManagerController {
     @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/goodaddtoact")
     @ResponseBody
-    public Msg goodAddToAct(ArrayList<Integer> goodIds, Integer activityId) {
-        for (Integer id: goodIds) {
+    public Msg goodAddToAct(AddAct addAct, Integer activityId) {
+        for (Integer id: addAct.getGoodIds()) {
             if(goodsService.addGood2Activity(id,activityId)==0){
                 return Msg.fail();
             }
         }
-        return Msg.fail();
+        return Msg.success();
     }
 
     //将商品从某个活动取消

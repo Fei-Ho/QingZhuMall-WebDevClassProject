@@ -1,25 +1,30 @@
 package com.springboot.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Order {
     private Integer id;
     private String orderCode;
     private Integer userId;
     private Integer orderPrice;
-    private String detail; //detail包含所有的购物车id
+    private String detail;  //detail包含所有的购物车id
+    private String address; //订单收获地址
     private Date gmtCreate;
     private String str_gmtCreate;
 
+    //private List<ShopCart> cartList = new ArrayList<>;//订单对应的购物车数据
+    //private List<Goods>
+
     public Order(){};
 
-    public Order(Integer id, String orderCode, Integer userId, Integer orderPrice, String detail, Date gmtCreate) {
-        this.id = id;
-        this.orderCode = orderCode;
-        this.userId = userId;
-        this.orderPrice = orderPrice;
-        this.detail = detail;
-        this.gmtCreate = gmtCreate;
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getStr_gmtCreate() {
