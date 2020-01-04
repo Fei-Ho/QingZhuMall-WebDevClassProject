@@ -51,4 +51,8 @@ public class GoodsService {
     public int addGood2Activity(Integer goodsId,Integer activityId){
         return goodsMapper.addGood2Activity(goodsId,activityId);
     }
+
+    public int rmvGoodFromAct(Integer goodsId,Integer activityId){
+        return goodsMapper.rmvGoodFromAct(goodsId,activityId);
+    }
 }

@@ -29,4 +29,6 @@ public interface GoodsMapper {
     ArrayList<Goods> selectByActivityId(Integer activityId);
 
     int addGood2Activity(Integer goodsId,Integer activityId);
+
+    int rmvGoodFromAct(Integer goodsId,Integer activityId);
 }

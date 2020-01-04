@@ -158,6 +158,18 @@ public class GoodsManagerController {
         }
     }
 
+    //将商品从某个活动取消
+    @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/admin/rmvgoodfromact")
+    @ResponseBody
+    public Msg rmvGoodFromAct(@RequestParam("goodId") Integer goodId,@RequestParam("activityId") Integer activityId) {
+        if(goodsService.rmvGoodFromAct(goodId,activityId)!=0){
+            return Msg.success();
+        }else{
+            return Msg.fail();
+        }
+    }
+
     public void copyFile(String src,String destDir,String fileName) throws IOException{
         FileInputStream in=new FileInputStream(src);
         File fileDir = new File(destDir);

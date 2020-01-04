@@ -94,4 +94,9 @@
         values(#{goodsId,jdbcType=INTEGER},#{activityId,jdbcType=INTEGER})
     </insert>
 
+    <delete id="rmvGoodFromAct" parameterType="Integer">
+        delete from activity_goods where activity_goods.goods_id = #{goodsId} AND activity_goods.activity_id = #{activityId}
+    </delete>
+
+
 </mapper>

@@ -7,48 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fbf97df-ed38-4e67-86e8-a6628bbf7e80" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/demo_jar.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/ShopCart.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/dao/CartMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/service/CartService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/CartMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/manager_static/antd.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/manager_static/antd.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/manager_static/jquery.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/manager_static/moment.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/manager_static/vue.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/adf5b2bc-80c0-4d0d-ac3f-19409a9572fd.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Goods.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Goods.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/service/OrderService.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/service/OrderService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ActivityMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ActivityMapper.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/Products_List.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/Products_List.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/administrator.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/administrator.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/manager/user_list.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/manager/user_list.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/bean/Goods.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/bean/Goods.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/controller/ActivityManagerController.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/controller/ActivityManagerController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/controller/GoodsManagerController.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/controller/GoodsManagerController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/controller/OrderManagerController.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/controller/OrderManagerController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/dao/GoodsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/dao/GoodsMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/dao/OrderMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/dao/OrderMapper.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/service/GoodsService.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/service/GoodsService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/service/OrderService.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/service/OrderService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ActivityMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ActivityMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/GoodsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/OrderMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/OrderMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/Products_List.html" afterPath="$PROJECT_DIR$/target/classes/templates/manager/Products_List.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/administrator.html" afterPath="$PROJECT_DIR$/target/classes/templates/manager/administrator.html" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/manager/user_list.html" afterPath="$PROJECT_DIR$/target/classes/templates/manager/user_list.html" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/05db7a21-bb05-44bd-a576-fc55f482711c.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/0fed079e-62b8-4fe1-a411-949b568501bd.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/4e594927-5231-4fb9-bba8-5ee6f55d4f28.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/5b196c29-d832-4911-a7d9-c7082975a4b2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/78a930f9-1ce3-4ab8-9c68-cec63d5ad04c.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/83dd82a0-8f44-431c-8167-a532437d3727.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/8764504a-127d-40fc-812a-5ee1dcfbdca7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/8820ad87-16f9-417d-b34d-8be81bb1a1af.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/9fb7121e-8f78-4365-957c-5f0ddf13fdf3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/adf5b2bc-80c0-4d0d-ac3f-19409a9572fd.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/b8124f8e-37a2-4b5a-b15f-1ee60567d1b5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/c283b246-f93d-4ef7-93ba-bd42391251c8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/f810dcad-456a-43d7-bc9a-ba311a56c823.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -102,8 +78,28 @@
       <file leaf-file-name="GoodsManagerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="170" column="35" lean-forward="false" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
+            <state relative-caret-position="305">
+              <caret line="161" column="45" lean-forward="true" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoodsMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="449">
+              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -112,18 +108,19 @@
       <file leaf-file-name="GoodsMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state relative-caret-position="273">
+              <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
               <folding>
-                <marker date="1578118197061" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
-                <marker date="1578118197061" expanded="true" signature="1687:1756" ph="select * fro... user" />
-                <marker date="1578118197061" expanded="true" signature="1824:1850" ph="select * fro... user" />
-                <marker date="1578118197061" expanded="true" signature="1941:2381" ph="insert into user... " />
-                <marker date="1578118197061" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
-                <marker date="1578118197061" expanded="true" signature="2607:3132" ph="update user... " />
-                <marker date="1578118197061" expanded="true" signature="3236:4398" ph="update user... " />
-                <marker date="1578118197061" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
-                <marker date="1578118197061" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+                <marker date="1578118828237" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
+                <marker date="1578118828237" expanded="true" signature="1687:1756" ph="select * fro... user" />
+                <marker date="1578118828237" expanded="true" signature="1824:1850" ph="select * fro... user" />
+                <marker date="1578118828237" expanded="true" signature="1941:2381" ph="insert into user... " />
+                <marker date="1578118828237" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
+                <marker date="1578118828237" expanded="true" signature="2607:3132" ph="update user... " />
+                <marker date="1578118828237" expanded="true" signature="3236:4398" ph="update user... " />
+                <marker date="1578118828237" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
+                <marker date="1578118828237" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+                <marker date="1578118828237" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
               </folding>
             </state>
           </provider>
@@ -132,8 +129,8 @@
       <file leaf-file-name="GoodsService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="47" column="58" lean-forward="true" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+            <state relative-caret-position="381">
+              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -164,16 +161,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
               <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ActivityMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/ActivityMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="12" column="33" lean-forward="false" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -290,7 +277,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -617,12 +604,12 @@
       <workItem from="1578017224825" duration="6960000" />
       <workItem from="1578029623200" duration="13311000" />
       <workItem from="1578047893899" duration="14535000" />
-      <workItem from="1578115624354" duration="1965000" />
+      <workItem from="1578115624354" duration="2528000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96150000" />
+    <option name="totallyTimeSpent" value="96713000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -634,7 +621,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -874,6 +861,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="377">
           <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
+          <folding>
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#654#655#0" expanded="false" />
+            <element signature="e#773#774#0" expanded="false" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#861#862#0" expanded="false" />
+            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#951#952#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1053#1054#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="false" />
+            <element signature="e#1175#1176#0" expanded="false" />
+            <element signature="e#1232#1233#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -898,13 +899,6 @@
             <marker date="1578051111930" expanded="true" signature="2218:2771" ph="update order_detail... " />
             <marker date="1578051111930" expanded="true" signature="2879:2948" ph="select * fro... order_detail" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -1111,44 +1105,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="47" column="58" lean-forward="true" selection-start-line="47" selection-start-column="58" selection-end-line="47" selection-end-column="58" />
+        <state relative-caret-position="449">
+          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="88" column="42" lean-forward="true" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="273">
+          <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
           <folding>
-            <marker date="1578118197061" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
-            <marker date="1578118197061" expanded="true" signature="1687:1756" ph="select * fro... user" />
-            <marker date="1578118197061" expanded="true" signature="1824:1850" ph="select * fro... user" />
-            <marker date="1578118197061" expanded="true" signature="1941:2381" ph="insert into user... " />
-            <marker date="1578118197061" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
-            <marker date="1578118197061" expanded="true" signature="2607:3132" ph="update user... " />
-            <marker date="1578118197061" expanded="true" signature="3236:4398" ph="update user... " />
-            <marker date="1578118197061" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
-            <marker date="1578118197061" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+            <marker date="1578118828237" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
+            <marker date="1578118828237" expanded="true" signature="1687:1756" ph="select * fro... user" />
+            <marker date="1578118828237" expanded="true" signature="1824:1850" ph="select * fro... user" />
+            <marker date="1578118828237" expanded="true" signature="1941:2381" ph="insert into user... " />
+            <marker date="1578118828237" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
+            <marker date="1578118828237" expanded="true" signature="2607:3132" ph="update user... " />
+            <marker date="1578118828237" expanded="true" signature="3236:4398" ph="update user... " />
+            <marker date="1578118828237" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
+            <marker date="1578118828237" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+            <marker date="1578118828237" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="170" column="35" lean-forward="false" selection-start-line="170" selection-start-column="35" selection-end-line="170" selection-end-column="35" />
+        <state relative-caret-position="305">
+          <caret line="161" column="45" lean-forward="true" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
           <folding />
         </state>
       </provider>
