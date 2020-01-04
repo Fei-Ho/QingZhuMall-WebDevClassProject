@@ -10,32 +10,16 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<!-- 二级页面的公共样式代码 -->
 		<link rel="stylesheet" href="css/common.css">
-		<!-- 页面的独有样式 --><script src="manager_static/assets/js/jquery.min.js"></script>
-		<link rel="stylesheet" href="css/blog.css">
+		<!-- 页面的独有样式 -->
+		<link rel="stylesheet" href="css/index_qinzhu.css">
+		<script src="manager_static/vue.js"></script>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+
 	</head>
-	<script>
-        function onload(){
-            // 如果找到了索引，就代表cookie存在，
-            // 反之，就说明不存在。
-            if (true)
-            {   var strCookie = document.cookie;
-                var arrCookie = strCookie.split(";");
-                var userid = 'null';
-                console.log(document.cookie);
-                for(var i = 0;i<arrCookie.length;i++){
-                    var arr = arrCookie[i].split(":");
-                    console.log(arr)
-                    if("userName"==arr[0]){
-                        userid = arr[1];
-                        $("#login").html(userid);}
-					if("id"==arr[0]){
-                        console.log(arr[1]);
-					}
-
-                }}}
-	</script>
-
-	<body onload="onload()">
+	<body>
 		<!------------------------------head------------------------------>
 		<div class="header">
 			<div class="header_c inner_c">
@@ -119,13 +103,14 @@
 						</span>
 					</div>
 					<div class = "reg_c">
-						<a href="land.html" id="login">登陆</a>
+						<a href="land.html" id="">登陆</a>
 						<span>&nbsp;|&nbsp;</span>
 						<a href="registe.html">注册</a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div id="app">
 
 		<div class="order cart mt">
 			<!-----------------site------------------->
@@ -210,45 +195,35 @@
 						<span>中通快递</span>
 					</div>
 				</div>
-				<div class="orderR fr">
+				<div class="orderR fr" >
 					<div class="msg">
 						<h3>订单内容<a href="cart.html" class="fr">返回购物车</a></h3>
 						<!--------ul---------------->
-						<ul class="clearfix">
+						<ul class="clearfix" v-for="item in dataList"  :key="item.id">
 							<li class="fl">
 								<img src="img/temp/order01.jpg">
 							</li>
 							<li class="fl">
-								<p>创意现代简约干花花瓶摆件</p>
-								<p>颜色分类：烟灰色玻璃瓶</p>
-								<p>数量：1</p>
+								<p>{{item.good.goodsName}}</p>
+								<p>{{item.userId}}</p>
+								<p>数量：{{item.goodsNum}}</p>
 							</li>
-							<li class="fr">￥69.90</li>
+							<li class="fr">￥{{item.totalPrice}}</li>
 						</ul>
-						<ul class="clearfix">
-							<li class="fl">
-								<img src="img/temp/order02.jpg">
-							</li>
-							<li class="fl">
-								<p>创意现代简约干花花瓶摆件</p>
-								<p>颜色分类：烟灰色玻璃瓶</p>
-								<p>数量：1</p>
-							</li>
-							<li class="fr">￥69.90</li>
-						</ul>
+
 					</div>
 					<!--------tips---------------->
 					<div class="tips">
-						<p><span class="fl">商品金额：</span><span class="fr">￥139.80</span></p>
+						<p><span class="fl">商品金额：</span><span class="fr">￥{{total}}</span></p>
 						<p><span class="fl">优惠金额：</span><span class="fr">￥0.00</span></p>
 						<p><span class="fl">运费：</span><span class="fr">免运费</span></p>
 					</div>
 					<!--------tips count---------------->
 					<div class="count tips">
-						<p><span class="fl">合计：</span><span class="fr">￥139.80</span></p>
+						<p><span class="fl">合计：</span><span class="fr">￥{{total}}</span></p>
 					</div>
 					<!--<input type="button" name="" value="去支付"> -->
-					<a href="ok" class="pay">去支付</a>
+					<a href="ok.html" class="pay" @click="generateOrder">去支付</a>
 				</div>
 			</div>
 		</div>
@@ -440,9 +415,81 @@
 			<a href="#" class = "top_c">↑</a>
 		</div>
 
-		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+		</div>
 	</body>
+
 </html>
+<script>
+	var d = [];
+	//  $("#id").html(data.code);
+	var vue = new Vue({
+        beforeMount : function(){
+            this.dataList = [],
+            // console.log(window.sessionStorage.getItem("data"));
+            this.dataList = JSON.parse(window.sessionStorage.getItem("data"));
+            this.total = parseFloat(window.sessionStorage.getItem("total"))
+		},
+        el: '#app',
+		data: {
+            dataList:[],
+			total: 0
+	    },
+		methods: {
+            generateOrder: function () {
+				// console.log(d);
+				var idList = "";
+				var userId = 0;
+                this.dataList.forEach(function (item, index) {  // 一个参数是item， 第二个是index 固定
+                    userId = item.userId;
+                    idList += ",";
+					idList += item.id.toString();
+				});
+
+                console.log(idList.substring(1));
+                console.log(userId);
+                var dd = {
+                    orderPrice: this.total,
+                    detail: idList.substring(1),
+                    userId: userId,
+					address: "暂无"
+				};
+
+                $.ajax({
+                    //几个参数需要注意一下
+                    type: "POST",//方法类型
+                    dataType: "json",//预期服务器返回的数据类型
+                    url: "http://192.168.43.164:8080/qingzhu/admin/addorder" ,//url
+                    // url: "http://47.98.52.193:9090/spring/qingzhu/typedata",
+                    contentType:"application/json",
+                    data: JSON.stringify(dd),
+                    // beforeSend: function(request) {
+                    //     request.setRequestHeader("Access-Control-Allow-Origin", "*");
+                    // },
+                    success: function (result) {
+
+                    },
+                    error : function() {
+                        alert("异常！");
+                    }
+                })
+            }
+		}
+	})
+
+
+
+</script>
+
+<!--
+<ul class="clearfix">
+							<li class="fl">
+								<img src="img/temp/order02.jpg">
+							</li>
+							<li class="fl">
+								<p>创意现代简约干花花瓶摆件</p>
+								<p>颜色分类：烟灰色玻璃瓶</p>
+								<p>数量：1</p>
+							</li>
+							<li class="fr">￥69.90</li>
+						</ul>
+-->
