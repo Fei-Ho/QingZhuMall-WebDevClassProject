@@ -48,8 +48,8 @@ public class GoodsService {
         return goodsMapper.selectByActivityId(activityId);
     }
 
-    public int addGood2Activity(Integer goodsId,Integer activityId){
-        return goodsMapper.addGood2Activity(goodsId,activityId);
+    public int addGood2Activity(Integer goodIds,Integer activityId){
+        return goodsMapper.addGood2Activity(goodIds,activityId);
     }
 
     public int rmvGoodFromAct(Integer goodsId,Integer activityId){

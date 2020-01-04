@@ -7,24 +7,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3fbf97df-ed38-4e67-86e8-a6628bbf7e80" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/AddAct.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/classes/artifacts/demo_jar/demo.jar" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/05db7a21-bb05-44bd-a576-fc55f482711c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/0fed079e-62b8-4fe1-a411-949b568501bd.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/4e594927-5231-4fb9-bba8-5ee6f55d4f28.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/5b196c29-d832-4911-a7d9-c7082975a4b2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/78a930f9-1ce3-4ab8-9c68-cec63d5ad04c.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/83dd82a0-8f44-431c-8167-a532437d3727.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/8764504a-127d-40fc-812a-5ee1dcfbdca7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/8820ad87-16f9-417d-b34d-8be81bb1a1af.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/9fb7121e-8f78-4365-957c-5f0ddf13fdf3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/adf5b2bc-80c0-4d0d-ac3f-19409a9572fd.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/b8124f8e-37a2-4b5a-b15f-1ee60567d1b5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/c283b246-f93d-4ef7-93ba-bd42391251c8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/upload/imgs/f810dcad-456a-43d7-bc9a-ba311a56c823.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/controller/CartShopController.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/controller/CartShopController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/controller/GoodsManagerController.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/controller/GoodsManagerController.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/dao/GoodsMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/dao/GoodsMapper.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/service/GoodsService.class" afterPath="$PROJECT_DIR$/target/classes/com/springboot/service/GoodsService.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/GoodsMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/GoodsMapper.xml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/05db7a21-bb05-44bd-a576-fc55f482711c.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/0fed079e-62b8-4fe1-a411-949b568501bd.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/4e594927-5231-4fb9-bba8-5ee6f55d4f28.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/5b196c29-d832-4911-a7d9-c7082975a4b2.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/78a930f9-1ce3-4ab8-9c68-cec63d5ad04c.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/83dd82a0-8f44-431c-8167-a532437d3727.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/8764504a-127d-40fc-812a-5ee1dcfbdca7.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/8820ad87-16f9-417d-b34d-8be81bb1a1af.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/9fb7121e-8f78-4365-957c-5f0ddf13fdf3.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/adf5b2bc-80c0-4d0d-ac3f-19409a9572fd.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/b8124f8e-37a2-4b5a-b15f-1ee60567d1b5.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/c283b246-f93d-4ef7-93ba-bd42391251c8.jpg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/upload/imgs/f810dcad-456a-43d7-bc9a-ba311a56c823.png" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -41,36 +50,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-              <folding>
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#423#424#0" expanded="true" />
-                <element signature="e#473#474#0" expanded="true" />
-                <element signature="e#511#512#0" expanded="true" />
-                <element signature="e#545#546#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-                <element signature="e#645#646#0" expanded="true" />
-                <element signature="e#679#680#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
-                <element signature="e#759#760#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-                <element signature="e#863#864#0" expanded="true" />
-                <element signature="e#907#908#0" expanded="true" />
-                <element signature="e#945#946#0" expanded="true" />
-                <element signature="e#975#976#0" expanded="true" />
-                <element signature="e#1000#1001#0" expanded="true" />
-                <element signature="e#1037#1038#0" expanded="true" />
-                <element signature="e#1065#1066#0" expanded="true" />
-                <element signature="e#1104#1105#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1195#1196#0" expanded="true" />
-                <element signature="e#1243#1244#0" expanded="true" />
-                <element signature="e#1284#1285#0" expanded="true" />
-                <element signature="e#1321#1322#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -78,8 +58,8 @@
       <file leaf-file-name="GoodsManagerController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="161" column="45" lean-forward="true" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+            <state relative-caret-position="303">
+              <caret line="166" column="17" lean-forward="true" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -88,18 +68,18 @@
       <file leaf-file-name="GoodsMapper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java">
+      <file leaf-file-name="GoodsService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="53">
+              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -108,39 +88,58 @@
       <file leaf-file-name="GoodsMapper.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+            <state relative-caret-position="165">
+              <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
               <folding>
-                <marker date="1578118828237" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
-                <marker date="1578118828237" expanded="true" signature="1687:1756" ph="select * fro... user" />
-                <marker date="1578118828237" expanded="true" signature="1824:1850" ph="select * fro... user" />
-                <marker date="1578118828237" expanded="true" signature="1941:2381" ph="insert into user... " />
-                <marker date="1578118828237" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
-                <marker date="1578118828237" expanded="true" signature="2607:3132" ph="update user... " />
-                <marker date="1578118828237" expanded="true" signature="3236:4398" ph="update user... " />
-                <marker date="1578118828237" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
-                <marker date="1578118828237" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
-                <marker date="1578118828237" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
+                <marker date="1578122790497" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
+                <marker date="1578122790497" expanded="true" signature="1687:1756" ph="select * fro... user" />
+                <marker date="1578122790497" expanded="true" signature="1824:1850" ph="select * fro... user" />
+                <marker date="1578122790497" expanded="true" signature="1941:2381" ph="insert into user... " />
+                <marker date="1578122790497" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
+                <marker date="1578122790497" expanded="true" signature="2607:3132" ph="update user... " />
+                <marker date="1578122790497" expanded="true" signature="3236:4398" ph="update user... " />
+                <marker date="1578122790497" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
+                <marker date="1578122790497" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+                <marker date="1578122790497" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
+      <file leaf-file-name="AddAct.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/AddAct.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+              <folding>
+                <element signature="e#182#183#0" expanded="true" />
+                <element signature="e#212#213#0" expanded="true" />
+                <element signature="e#265#266#0" expanded="true" />
+                <element signature="e#303#304#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#471#472#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartShopController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="107">
+              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActivityManagerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java">
+      <file leaf-file-name="ActivityService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/ActivityService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -149,28 +148,18 @@
       <file leaf-file-name="OrderManagerController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1458">
-              <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
+            <state relative-caret-position="378">
+              <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Msg.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Msg.java">
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/test.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
+            <state relative-caret-position="234">
+              <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -217,7 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/Authority.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/Company.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/Feedback.java" />
@@ -241,7 +229,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/MemberManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/TestController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/dao/ActivityMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/service/ActivityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/dao/AdminMapper.java" />
@@ -256,14 +243,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springboot/dao/CartMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/service/CartService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/ShopCart.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/CartMapper.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ActivityMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/manager/Products_List.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springboot/dao/CartMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/springboot/bean/AddAct.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml" />
@@ -277,7 +266,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -388,22 +377,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qingzhu_mall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="qingzhu_mall" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="demo" type="b2602c69:ProjectViewProjectNode" />
@@ -604,12 +577,12 @@
       <workItem from="1578017224825" duration="6960000" />
       <workItem from="1578029623200" duration="13311000" />
       <workItem from="1578047893899" duration="14535000" />
-      <workItem from="1578115624354" duration="2528000" />
+      <workItem from="1578115624354" duration="7351000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96713000" />
+    <option name="totallyTimeSpent" value="101536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -621,7 +594,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -637,7 +610,7 @@
       <window_info id="调色板" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2730711" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24357034" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="设计器" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -705,13 +678,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/Add_Brand.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/Order_handling.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3960">
@@ -740,6 +706,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -755,6 +722,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -776,6 +744,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="34" column="39" lean-forward="true" selection-start-line="15" selection-start-column="4" selection-end-line="34" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,13 +776,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="143">
           <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="e#501#502#0" expanded="false" />
+            <element signature="e#555#556#0" expanded="false" />
+            <element signature="e#621#622#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#766#767#0" expanded="false" />
+            <element signature="e#803#804#0" expanded="false" />
+            <element signature="e#851#852#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+            <element signature="e#940#941#0" expanded="false" />
+            <element signature="e#981#982#0" expanded="false" />
+            <element signature="e#1033#1034#0" expanded="false" />
+            <element signature="e#1083#1084#0" expanded="false" />
+            <element signature="e#1144#1145#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -843,17 +821,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/upload/imgs/adf5b2bc-80c0-4d0d-ac3f-19409a9572fd.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/MemberManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ShopController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -878,13 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="36" lean-forward="false" selection-start-line="24" selection-start-column="36" selection-end-line="24" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/OrderMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -906,6 +871,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="29" lean-forward="true" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
+          <folding>
+            <element signature="e#492#493#0" expanded="false" />
+            <element signature="e#524#525#0" expanded="false" />
+            <element signature="e#574#575#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#652#653#0" expanded="false" />
+            <element signature="e#684#685#0" expanded="false" />
+            <element signature="e#734#735#0" expanded="false" />
+            <element signature="e#776#777#0" expanded="false" />
+            <element signature="e#817#818#0" expanded="false" />
+            <element signature="e#854#855#0" expanded="false" />
+            <element signature="e#914#915#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1002#1003#0" expanded="false" />
+            <element signature="e#1034#1035#0" expanded="false" />
+            <element signature="e#1084#1085#0" expanded="false" />
+            <element signature="e#1126#1127#0" expanded="false" />
+            <element signature="e#1164#1165#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+            <element signature="e#1250#1251#0" expanded="false" />
+            <element signature="e#1294#1295#0" expanded="false" />
+            <element signature="e#1332#1333#0" expanded="false" />
+            <element signature="e#1365#1366#0" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1462#1463#0" expanded="false" />
+            <element signature="e#1499#1500#0" expanded="false" />
+            <element signature="e#1531#1532#0" expanded="false" />
+            <element signature="e#1582#1583#0" expanded="false" />
+            <element signature="e#1624#1625#0" expanded="false" />
+            <element signature="e#1659#1660#0" expanded="false" />
+            <element signature="e#1692#1693#0" expanded="false" />
+            <element signature="e#1742#1743#0" expanded="false" />
+            <element signature="e#1786#1787#0" expanded="false" />
+            <element signature="e#1827#1828#0" expanded="false" />
+            <element signature="e#1863#1864#0" expanded="false" />
+            <element signature="e#1922#1923#0" expanded="false" />
+            <element signature="e#1972#1973#0" expanded="false" />
+            <element signature="e#2002#2003#0" expanded="false" />
+            <element signature="e#2027#2028#0" expanded="false" />
+            <element signature="e#2064#2065#0" expanded="false" />
+            <element signature="e#2092#2093#0" expanded="false" />
+            <element signature="e#2124#2125#0" expanded="false" />
+            <element signature="e#2151#2152#0" expanded="false" />
+            <element signature="e#2192#2193#0" expanded="false" />
+            <element signature="e#2224#2225#0" expanded="false" />
+            <element signature="e#2257#2258#0" expanded="false" />
+            <element signature="e#2286#2287#0" expanded="false" />
+            <element signature="e#2330#2331#0" expanded="false" />
+            <element signature="e#2366#2367#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -920,6 +935,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -927,6 +943,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding>
+            <element signature="e#486#487#0" expanded="false" />
+            <element signature="e#542#543#0" expanded="false" />
+            <element signature="e#632#633#0" expanded="false" />
+            <element signature="e#688#689#0" expanded="false" />
+            <element signature="e#746#747#0" expanded="false" />
+            <element signature="e#788#789#0" expanded="false" />
+            <element signature="e#831#832#0" expanded="false" />
+            <element signature="e#881#882#0" expanded="false" />
+            <element signature="e#925#926#0" expanded="false" />
+            <element signature="e#977#978#0" expanded="false" />
+            <element signature="e#1024#1025#0" expanded="false" />
+            <element signature="e#1078#1079#0" expanded="false" />
+            <element signature="e#1134#1135#0" expanded="false" />
+            <element signature="e#1197#1198#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -954,20 +986,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="53" lean-forward="false" selection-start-line="23" selection-start-column="53" selection-end-line="23" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/ShopCart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/manager_static/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -980,16 +998,6 @@
         <state relative-caret-position="3780">
           <caret line="210" column="10" lean-forward="false" selection-start-line="210" selection-start-column="10" selection-end-line="210" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/ActivityService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,13 +1014,6 @@
             <marker date="1578060240754" expanded="true" signature="1857:2148" ph="update order_detail... " />
             <marker date="1578060240754" expanded="true" signature="2255:2849" ph="update activity_detail... " />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/CartMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="15" lean-forward="false" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1040,62 +1041,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-            <element signature="e#473#474#0" expanded="true" />
-            <element signature="e#511#512#0" expanded="true" />
-            <element signature="e#545#546#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
-            <element signature="e#759#760#0" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
-            <element signature="e#863#864#0" expanded="true" />
-            <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#945#946#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1000#1001#0" expanded="true" />
-            <element signature="e#1037#1038#0" expanded="true" />
-            <element signature="e#1065#1066#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1139#1140#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-            <element signature="e#1243#1244#0" expanded="true" />
-            <element signature="e#1284#1285#0" expanded="true" />
-            <element signature="e#1321#1322#0" expanded="true" />
-            <element signature="e#1381#1382#0" expanded="true" />
-            <element signature="e#1433#1434#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/upload/imgs/5b196c29-d832-4911-a7d9-c7082975a4b2.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="115" column="0" lean-forward="false" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1458">
-          <caret line="90" column="28" lean-forward="false" selection-start-line="90" selection-start-column="28" selection-end-line="90" selection-end-column="28" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/manager/Products_List.html">
@@ -1108,50 +1056,184 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/OrderMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
-          <caret line="31" column="1" lean-forward="true" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <caret line="31" column="1" lean-forward="false" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/CartMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/ShopCart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" lean-forward="true" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#392#393#0" expanded="false" />
+            <element signature="e#419#420#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
+            <element signature="e#490#491#0" expanded="false" />
+            <element signature="e#520#521#0" expanded="false" />
+            <element signature="e#545#546#0" expanded="false" />
+            <element signature="e#582#583#0" expanded="false" />
+            <element signature="e#610#611#0" expanded="false" />
+            <element signature="e#644#645#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#718#719#0" expanded="false" />
+            <element signature="e#754#755#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#866#867#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#940#941#0" expanded="false" />
+            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#1020#1021#0" expanded="false" />
+            <element signature="e#1060#1061#0" expanded="false" />
+            <element signature="e#1097#1098#0" expanded="false" />
+            <element signature="e#1130#1131#0" expanded="false" />
+            <element signature="e#1182#1183#0" expanded="false" />
+            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#1260#1261#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <element signature="e#1340#1341#0" expanded="false" />
+            <element signature="e#1382#1383#0" expanded="false" />
+            <element signature="e#1418#1419#0" expanded="false" />
+            <element signature="e#1452#1453#0" expanded="false" />
+            <element signature="e#1504#1505#0" expanded="false" />
+            <element signature="e#1550#1551#0" expanded="false" />
+            <element signature="e#1590#1591#0" expanded="false" />
+            <element signature="e#1626#1627#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+            <element signature="e#1734#1735#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-703">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/MemberManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="76" column="10" lean-forward="true" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/ActivityManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/AddAct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="31" lean-forward="true" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
+          <folding>
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#265#266#0" expanded="true" />
+            <element signature="e#303#304#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/OrderManagerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="102" column="9" lean-forward="true" selection-start-line="102" selection-start-column="9" selection-end-line="102" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/bean/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/dao/GoodsMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+        <state relative-caret-position="377">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/GoodsMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="88" column="53" lean-forward="true" selection-start-line="88" selection-start-column="53" selection-end-line="88" selection-end-column="53" />
+        <state relative-caret-position="165">
+          <caret line="82" column="17" lean-forward="true" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
           <folding>
-            <marker date="1578118828237" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
-            <marker date="1578118828237" expanded="true" signature="1687:1756" ph="select * fro... user" />
-            <marker date="1578118828237" expanded="true" signature="1824:1850" ph="select * fro... user" />
-            <marker date="1578118828237" expanded="true" signature="1941:2381" ph="insert into user... " />
-            <marker date="1578118828237" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
-            <marker date="1578118828237" expanded="true" signature="2607:3132" ph="update user... " />
-            <marker date="1578118828237" expanded="true" signature="3236:4398" ph="update user... " />
-            <marker date="1578118828237" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
-            <marker date="1578118828237" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
-            <marker date="1578118828237" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
+            <marker date="1578122790497" expanded="true" signature="1511:1565" ph="select * fro... goods_detail" />
+            <marker date="1578122790497" expanded="true" signature="1687:1756" ph="select * fro... user" />
+            <marker date="1578122790497" expanded="true" signature="1824:1850" ph="select * fro... user" />
+            <marker date="1578122790497" expanded="true" signature="1941:2381" ph="insert into user... " />
+            <marker date="1578122790497" expanded="true" signature="2458:2512" ph="delete from goods_detail... " />
+            <marker date="1578122790497" expanded="true" signature="2607:3132" ph="update user... " />
+            <marker date="1578122790497" expanded="true" signature="3236:4398" ph="update user... " />
+            <marker date="1578122790497" expanded="true" signature="4522:4795" ph="select goods... goods_detail" />
+            <marker date="1578122790497" expanded="true" signature="4879:5002" ph="insert into activity_goods... " />
+            <marker date="1578122790497" expanded="true" signature="5083:5199" ph="delete from activity_goods... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/ActivityService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/service/GoodsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/CartShopController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/springboot/controller/GoodsManagerController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="161" column="45" lean-forward="true" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="45" />
+        <state relative-caret-position="303">
+          <caret line="166" column="17" lean-forward="true" selection-start-line="166" selection-start-column="17" selection-end-line="166" selection-end-column="17" />
           <folding />
         </state>
       </provider>

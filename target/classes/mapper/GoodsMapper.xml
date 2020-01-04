@@ -89,4 +89,14 @@
         select goods_detail.id,goods_name,`type`,goods_price,goods_stock,goods_sold,detail,create_time,price_original,picURLone,picURLtwo from goods_detail, activity_goods where activity_goods.activity_id=#{activityId,jdbcType=INTEGER} and goods_detail.id = activity_goods.goods_id;
     </select>
 
+    <insert id="addGood2Activity" parameterType="Integer">
+        insert into activity_goods(goods_id,activity_id)
+        values(#{goodIds,jdbcType=INTEGER},#{activityId,jdbcType=INTEGER})
+    </insert>
+
+    <delete id="rmvGoodFromAct" parameterType="Integer">
+        delete from activity_goods where activity_goods.goods_id = #{goodsId} AND activity_goods.activity_id = #{activityId}
+    </delete>
+
+
 </mapper>

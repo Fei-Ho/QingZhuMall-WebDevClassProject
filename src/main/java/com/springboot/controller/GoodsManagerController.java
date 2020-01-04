@@ -1,6 +1,7 @@
 package com.springboot.controller;
 
 
+import com.springboot.bean.AddAct;
 import com.springboot.bean.Goods;
 import com.springboot.bean.Msg;
 import com.springboot.bean.User;
@@ -19,6 +20,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
@@ -150,12 +152,13 @@ public class GoodsManagerController {
     @CrossOrigin(origins = {"*"}, methods = {RequestMethod.GET, RequestMethod.POST})
     @PostMapping("/admin/goodaddtoact")
     @ResponseBody
-    public Msg goodAddToAct(@RequestParam("goodId") Integer goodId,@RequestParam("activityId") Integer activityId) {
-        if(goodsService.addGood2Activity(goodId,activityId)!=0){
-            return Msg.success();
-        }else{
-            return Msg.fail();
+    public Msg goodAddToAct(ArrayList<Integer> goodIds, Integer activityId) {
+        for (Integer id: goodIds) {
+            if(goodsService.addGood2Activity(id,activityId)==0){
+                return Msg.fail();
+            }
         }
+        return Msg.fail();
     }
 
     //将商品从某个活动取消
@@ -191,7 +194,5 @@ public class GoodsManagerController {
         in.close();
         out.close();
     }
-
-
 
 }

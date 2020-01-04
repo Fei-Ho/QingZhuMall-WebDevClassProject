@@ -1,10 +1,8 @@
 package com.springboot.controller;
 
-import com.springboot.bean.Admin;
-import com.springboot.bean.Msg;
-import com.springboot.bean.ShopCart;
-import com.springboot.bean.User;
+import com.springboot.bean.*;
 import com.springboot.service.CartService;
+import com.springboot.service.GoodsService;
 import com.springboot.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,6 +17,9 @@ public class CartShopController {
 
     @Autowired
     CartService cartService;
+
+    @Autowired
+    GoodsService goodsService;
 
     //获取所有购物车
     @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
@@ -43,4 +44,17 @@ public class CartShopController {
         return Msg.success().add("carts",shopCartList);
     }
 
+    //加入购物车
+    @CrossOrigin(origins={"*"}, methods={RequestMethod.GET, RequestMethod.POST})
+    @PostMapping("/admin/addcart")
+    @ResponseBody
+    public Msg addCart(ShopCart shopCart){
+        Goods good = goodsService.selectByGoodsId(shopCart.getGoodsId());
+        shopCart.setTotalPrice((double)good.getGoodsPrice()*shopCart.getGoodsNum());
+        if(cartService.insert(shopCart)!=0){
+            return Msg.success();
+        }else{
+            return Msg.fail();
+        }
+    }
 }

@@ -7,7 +7,7 @@ public class Order {
     private String orderCode;
     private Integer userId;
     private Integer orderPrice;
-    private String detail;
+    private String detail; //detail包含所有的购物车id
     private Date gmtCreate;
     private String str_gmtCreate;
 

@@ -91,7 +91,7 @@
 
     <insert id="addGood2Activity" parameterType="Integer">
         insert into activity_goods(goods_id,activity_id)
-        values(#{goodsId,jdbcType=INTEGER},#{activityId,jdbcType=INTEGER})
+        values(#{goodIds,jdbcType=INTEGER},#{activityId,jdbcType=INTEGER})
     </insert>
 
     <delete id="rmvGoodFromAct" parameterType="Integer">
