@@ -11,7 +11,7 @@
     </resultMap>
 
     <select id="login" resultType="com.springboot.bean.Admin" parameterType="String">
-      select * from admin where admin.adminname=#{adminName} and user.password=#{password}
+      select * from admin where admin.adminname=#{adminName} and admin.password=#{password}
     </select>
 
     <select id="selectByAdminId" resultMap="AdminResultMap" parameterType="Integer">

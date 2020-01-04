@@ -23,7 +23,7 @@ public class ManagerController {
 
     //管理员登录
     @PostMapping("/admin/login")
-    public String login(@RequestParam("adminName") String adminName, @RequestParam("password") String password, HttpServletResponse response) {
+    public String login(String adminName,String password, HttpServletResponse response) {
         Admin admin = adminService.login(adminName,password);
         if(admin!=null){
             response.addHeader("Set-Cookie","adminName:"+admin.getAdminName()+";id:"+admin.getId());

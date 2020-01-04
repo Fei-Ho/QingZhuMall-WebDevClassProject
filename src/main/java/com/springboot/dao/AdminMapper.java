@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public interface AdminMapper {
 
     //管理员登录
-    Admin login(String adminName, String password);
+    Admin login(@Param("adminName") String adminName, @Param("password") String password);
 
     Admin selectByAdminId(Integer id);
 
