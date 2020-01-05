@@ -14,6 +14,20 @@
 	    <link rel="stylesheet" href="css/common.css">
 	    <!-- 页面的独有样式 -->
         <link rel="stylesheet" href="css/index_qinzhu.css">
+        <script>
+            function onload(){
+                // 如果找到了索引，就代表cookie存在，
+                // 反之，就说明不存在。
+                if (true) {   var strCookie = document.cookie;
+                    var arrCookie = strCookie.split(";");
+                    var userid = '';
+                    for(var i = 0;i<arrCookie.length;i++){
+                        var arr = arrCookie[i].split("=");
+                        if("userName"==arr[0]){
+                            userid = arr[1];
+                            $("#login").html(userid);
+                            break;}}}}
+        </script>
 <script>
 function formatMoney(num){
     num = num.toString().replace(/\$|\,/g,''); 
@@ -75,7 +89,7 @@ $(function(){
 </script>
 </head>
  
-<body>
+<body onload="onload()">
  
     <div class="header">
         <div class="header_c inner_c">
@@ -159,7 +173,7 @@ $(function(){
               </span>
             </div>
             <div class = "reg_c">
-              <a href="land.html" id="">登陆</a>
+              <a href="land.html" id="login">登陆</a>
               <span>&nbsp;|&nbsp;</span>
               <a href="registe.html">注册</a>
             </div>

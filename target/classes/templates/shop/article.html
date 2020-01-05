@@ -9,6 +9,22 @@
 	<link rel="stylesheet" href="css/common.css">
 	<!-- 自己页面的独有样式 --><script src="manager_static/assets/js/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/article.css">
+	<script>
+        function onload(){
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true) {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                var userid = '';
+                for(var i = 0;i<arrCookie.length;i++){
+                    alert(arrCookie);
+                    var arr = arrCookie[i].split("=");
+                    alert(arr[0]+arr[1]);
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);
+                        break;}}}}
+	</script>
 </head>
 <script>
     function onload(){

@@ -9,23 +9,22 @@
 	<link rel="stylesheet" href="css/common.css">
 	<!-- 页面的独有样式 --><script src="manager_static/assets/js/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/blog.css">
+	<script>
+        function onload(){
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true) {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                var userid = '';
+                for(var i = 0;i<arrCookie.length;i++){
+                    var arr = arrCookie[i].split("=");
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);
+                        break;}}}}
+	</script>
 </head>
-<script>
-    function onload(){
-        // 如果找到了索引，就代表cookie存在，
-        // 反之，就说明不存在。
-        if (true)
-        {   var strCookie = document.cookie;
-            var arrCookie = strCookie.split(";");
-            var userid = 'null';
-            console.log(arrCookie);
-            for(var i = 0;i<arrCookie.length;i++){
-                var arr = arrCookie[i].split(":");
-                if("userName"==arr[0]){
-                    userid = arr[1];
-                    $("#login").html(userid);
-                    break;}}}}
-</script>
+
 
 <body onload="onload()">
 	<!-- header部分开始 -->

@@ -13,8 +13,22 @@
 	<script src="manager_static/js/ajax.js" type="text/javascript"></script>
 	<script src="manager_static/js/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="manager_static/Widget/zTree/js/jquery.ztree.all-3.5.min.js"></script>
+	<script>
+        function onload(){
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true) {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                var userid = '';
+                for(var i = 0;i<arrCookie.length;i++){
+                    var arr = arrCookie[i].split("=");
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);
+                        break;}}}}
+	</script>
 </head>
-<body>
+<body onload="onload()">
 <div id="app">
 	<!-- header部分开始 -->
 	<div class="header">
@@ -71,7 +85,7 @@
 					</span>
 				</div>
 				<div class = "reg_c">
-					<a href="land.html" id="">登陆</a>
+					<a href="land.html" id="login">登陆</a>
 					<span>&nbsp;|&nbsp;</span>
 					<a href="registe.html">注册</a>
 				</div>

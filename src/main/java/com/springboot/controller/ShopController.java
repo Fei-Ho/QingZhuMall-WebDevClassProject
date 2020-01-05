@@ -22,13 +22,24 @@ public class ShopController {
     @ResponseBody
     public Msg login(String userName, String password, HttpServletResponse response) {
         User user  = userService.login(userName,password);
+        System.out.println(user.getUserName());
+        System.out.println(user.getId());
+        System.out.println("out");
         if(user!=null){
-            Cookie cookie = new Cookie("userName",user.getUserName());
+            System.out.println("cookie");
+            /*Cookie cookie = new Cookie("userName",user.getUserName());
+            cookie.setPath("/");//设置成跟写入cookies一样的
+            cookie.setMaxAge(0);
+            response.addCookie(cookie);*/
+
+            //response.setHeader('Set-Cookie','token=cowshield');
             //cookie.setDomain("/");
-            response.addCookie(cookie);
-            Cookie cookie1 = new Cookie("userId",user.getId().toString());
+            /*response.addCookie(cookie);
+            Cookie cookie1 = new Cookie("userId",user.getId().toString());*/
             //cookie1.setDomain("/");
-            response.addCookie(cookie1);
+            /*response.addCookie(cookie1);
+            response.setHeader("set");*/
+            //return "/shop/index";
             return Msg.success();
         }else{
             return Msg.fail();

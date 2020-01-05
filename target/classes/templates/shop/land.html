@@ -10,6 +10,41 @@
 	<link rel="stylesheet" href="css/common.css">
 	<!-- 自己页面的独有CSS -->
 	<link rel="stylesheet" href="css/login.css">
+	<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		function submit_form() {
+            $.ajax({
+                type: "POST",//方法类型
+                dataType: "json",//预期服务器返回的数据类型
+                url: "http://192.168.43.164:8080/qingzhu/userlogin",//url
+                contentType: "application/x-www-form-urlencoded",
+                data: {
+                    userName: "HeFei",
+                    password: "123456"
+                },
+                success: function (result) {
+                    if(result.code == 100){
+                        document.cookie="userName=HeFei"
+                        window.location.href = "index.html";
+                    }
+                    else{
+                        alert('密码错误！',{
+                            title: '提示框',
+                            icon:0
+                        })
+                    }
+
+                },
+                error: function (result) {
+                    console.log(result)
+                    alert('访问异常！',{
+                        title: '提示框',
+                        icon:0
+                    })
+                }
+            });
+        }
+	</script>
 </head>
 <body>
 	<!-- header部分开始 -->
@@ -106,7 +141,7 @@
 	<div class="login">
 		<div class="main">
 			<h2>登录</h2>
-			<form method="post" action="http://192.168.43.164:8080/qingzhu/userlogin">
+			<form method="post" action="#">
 				<!-- 用户名 type属性值是text指的是文本框-->
 				<input name="userName" type="text" placeholder="手机/邮箱/用户名" class = "in1" >
 				<!-- 密码 type属性值是password指的是密码框-->
@@ -121,7 +156,7 @@
 					</a>
 				</p>
 				<!-- input的type值如果是button，指的是按钮 -->
-				<input type="submit" onclick="" value = "登陆" class = "btn_d">
+				<input type="button" onclick="submit_form()" value = "登陆" class = "btn_d">
 				<input type="button" value = "用短信登陆" class = "btn_p">
 			</form>
 			<div class = "acc">

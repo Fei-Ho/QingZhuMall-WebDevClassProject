@@ -17,9 +17,253 @@
 		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" href="css/blog.css">
+		<script>
+            var current_add;
+            function select_add_current(i) {
+				if(i==1){
+				    current_add = document.getElementById("address_1").innerText;
+				}else if(i==2){
+				    current_add = document.getElementById("address_2").innerText;
+				}
+				else if(i==3){
+				    current_add = document.getElementById("address_3").innerText;
+				}
 
+            }
+
+            function onload(){
+                // 如果找到了索引，就代表cookie存在，
+                // 反之，就说明不存在。
+                if (true) {   var strCookie = document.cookie;
+                    var arrCookie = strCookie.split(";");
+                    var userid = '';
+                    for(var i = 0;i<arrCookie.length;i++){
+                        alert(arrCookie);
+                        var arr = arrCookie[i].split("=");
+                        alert(arr[0]+arr[1]);
+                        if("userName"==arr[0]){
+                            userid = arr[1];
+                            $("#login").html(userid);
+                            break;}}}}
+		</script>
 	</head>
-	<body>
+	<script>
+		var userid = 1;
+		var id  = 1;
+		var which_add_selected = 1;
+
+		function change_select(data) {
+			which_add_selected=data;
+		}
+		
+		function delete_add(data) {
+
+			if(data == 2){
+				$.ajax({
+					type:"POST",
+					url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+					dataType:"text",
+					data:{
+						"id":id,
+						"address2":null,
+					},
+					success:function(data){
+
+						onload();
+					},
+				});
+			}
+			if(data == 3){
+				$.ajax({
+					type:"POST",
+					url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+					dataType:"text",
+					data:{
+						"id":id,
+						"address3":null,
+					},
+					success:function(data){
+
+						onload();
+					},
+				});
+			}
+
+
+		}
+
+		function change_add(data) {
+			
+			var add;
+			add = document.getElementById("province").value + document.getElementById("city").value +document.getElementById("district").value + document.getElementById("exact_add").value;
+			if(which_add_selected == 1){
+
+
+				$.ajax({
+					type:"POST",
+					url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+					dataType:"text",
+					data:{
+						"id":id,
+						"address":add,
+					},
+					success:function(data){
+
+						onload();
+					},
+				});
+			}
+
+			if(which_add_selected == 2){
+
+				$.ajax({
+					type:"POST",
+					url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+					dataType:"text",
+					data:{
+						"id":id,
+						"address2":add,
+					},
+					success:function(data){
+
+						onload()
+					},
+				});
+			}
+			if(which_add_selected == 3){
+
+				$.ajax({
+					type:"POST",
+					url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+					dataType:"text",
+					data:{
+						"id":id,
+						"address3":add,
+					},
+					success:function(data){
+
+						onload();
+					},
+				});
+			}
+
+
+		}
+		
+		function add_address() {
+			$.ajax({
+				type:"POST",
+				url:"http://192.168.43.164:8080/qingzhu/admin/getuserbyid",
+				dataType:"text",
+				data:{
+					"userId":1,
+				},
+				success:function(data){
+					data = JSON.parse(data);
+					$("#info_1").show();$("#info_2").hide();$("#info_3").hide();
+
+					if(data.extend.user.address2 == null || data.extend.user.address2 == ""){
+						$.ajax({
+							type:"POST",
+							url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+							dataType:"text",
+							data:{
+								"id":id,
+								"address2":"浙江省杭州市江干区杭州电子科技大学2号楼",
+							},
+							success:function(data){
+								// $("#address_2").html("");
+								// $("#address_2").html("浙江省杭州市江干区杭州电子科技大学2号楼");
+								onload();
+							},
+						});
+					}
+					else if(data.extend.user.address3 == null || data.extend.user.address3 == ""){
+						$.ajax({
+							type:"POST",
+							url:"http://192.168.43.164:8080/qingzhu/admin/updateuser",
+							dataType:"text",
+							data:{
+								"id":id,
+								"address3":"浙江省杭州市江干区杭州电子科技大学3号楼",
+							},
+							success:function(data){
+								// $("#address_3").html("");
+								// $("#address_3").html("浙江省杭州市江干区杭州电子科技大学");
+								onload();
+							},
+						});
+					}
+				},
+			});
+
+
+		}
+		
+		
+		
+		
+        function onload(){
+
+
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true)
+            {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                for(var i = 0;i<arrCookie.length;i++){
+                    var arr = arrCookie[i].split("=");
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);}
+					if("userId"==arr[0]){
+                        console.log(arr[1])
+					}
+
+                }}
+			var count_address=0;
+
+			$.ajax({
+				type:"POST",
+				url:"http://localhost:8080/qingzhu/admin/getuserbyid",
+				dataType:"text",
+				data:{
+					"userId":1,
+				},
+				success:function(data){
+
+					data = JSON.parse(data);
+					$("#info_1").show();$("#info_2").hide();$("#info_3").hide();
+
+
+					if(data.extend.user.address != null && data.extend.user.address != ""){
+						count_address+=1;
+						$("#info_1").show();
+						$("#name_1").html(data.extend.user.userName);
+						$("#address_1").html(data.extend.user.address);
+
+						$("#phone_1").html(data.extend.user.phone);
+					}
+					if(data.extend.user.address2 != null && data.extend.user.address2 != ""){
+						count_address+=1;$("#info_2").show();
+						$("#name_2").html(data.extend.user.userName);
+						$("#address_2").html(data.extend.user.address2);
+						$("#phone_2").html(data.extend.user.phone);
+					}
+					if(data.extend.user.address3 != null && data.extend.user.address3 != ""){
+						count_address+=1;$("#info_3").show();
+						$("#name_3").html(data.extend.user.userName);
+						$("#address_3").html(data.extend.user.address3);
+						$("#phone_3").html(data.extend.user.phone);
+					}
+				},
+			});
+        }
+
+
+	</script>
+	<body onload="onload()" >
 		<!------------------------------head------------------------------>
 		<div class="header">
 			<div class="header_c inner_c">
@@ -103,7 +347,7 @@
 						</span>
 					</div>
 					<div class = "reg_c">
-						<a href="land.html" id="">登陆</a>
+						<a href="land.html" id="login">登陆</a>
 						<span>&nbsp;|&nbsp;</span>
 						<a href="registe.html">注册</a>
 					</div>
@@ -124,57 +368,57 @@
 			<div class="orderCon wrapper clearfix">
 				<div class="orderL fl">
 					<!--------h3---------------->
-					<h3>收件信息<a href="#" class="fr">新增地址</a></h3>
+					<h3>收件信息<a onclick="add_address()" href="#" class="fr">新增地址</a></h3>
 					<!--------addres---------------->
 					<div class="addres clearfix">
-						<div class="addre fl on">
+						<div onclick="select_add_current(1)" id="info_1" hidden="hidden" class="addre fl on">
 							<div class="tit clearfix">
-								<p class="fl">张三1
+								<p id="name_1" class="fl">张三1
 									<span class="default">[默认地址]</span>
 								</p>
 								<p class="fr">
-									<a href="#">删除</a>
+									<a href="#" onclick="delete_add(1)">删除</a>
 									<span>|</span>
-									<a href="#" class="edit">编辑</a>
+									<a href="#" onclick="change_select(1)" class="edit">编辑</a>
 								</p>
 							</div>
 							<div class="addCon">
-								<p>浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学</p>
-								<p>15732570937</p>
+								<p id="address_1">浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学2号楼</p>
+								<p id="phone_1">15732570937</p>
 							</div>
 						</div>
-						<div class="addre fl">
+						<div onclick="select_add_current(2)" id="info_2" hidden="hidden" class="addre fl">
 							<div class="tit clearfix">
-								<p class="fl">张三2
+								<p id="name_2" class="fl">张三2
 								</p>
 								<p class="fr">
 									<a href="#" class="setDefault">设为默认</a>
 									<span>|</span>
-									<a href="#">删除</a>
+									<a href="#" onclick="delete_add(2)">删除</a>
 									<span>|</span>
-									<a href="#" class="edit">编辑</a>
+									<a href="#" onclick="change_select(2)" class="edit">编辑</a>
 								</p>
 							</div>
 							<div class="addCon">
-								<p>浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学</p>
-								<p>15732570937</p>
+								<p id="address_2">浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学</p>
+								<p id="phone_2">15732570937</p>
 							</div>
 						</div>
-						<div class="addre fl">
+						<div onclick="select_add_current(3)" id="info_3"hidden="hidden" class="addre fl">
 							<div class="tit clearfix">
-								<p class="fl">张三3
+								<p id="name_3" class="fl">张三3
 								</p>
 								<p class="fr">
 									<a href="#" class="setDefault">设为默认</a>
 									<span>|</span>
-									<a href="#">删除</a>
+									<a href="#" onclick="delete_add(3)">删除</a>
 									<span>|</span>
-									<a href="#" class="edit">编辑</a>
+									<a href="#" onclick="change_select(3)" class="edit">编辑</a>
 								</p>
 							</div>
 							<div class="addCon">
-								<p>浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学</p>
-								<p>15732570937</p>
+								<p id="address_3">浙江省&nbsp;杭州市&nbsp;下沙区&nbsp;浙江理工大学</p>
+								<p id="phone_3">15732570937</p>
 							</div>
 						</div>
 					</div>
@@ -231,27 +475,16 @@
 		<!--遮罩-->
 		<div class="mask"></div>
 		<div class="adddz editAddre">
-			<form action="#" method="get">
-				<input type="text" placeholder="姓名" class="on" />
-				<input type="text" placeholder="手机号" />
-				<div class="city">
-					<select name="">
-						<option value="省份/自治区">省份/自治区</option>
-					</select>
-					<select>
-						<option value="城市/地区">城市/地区</option>
-					</select>
-					<select>
-						<option value="区/县">区/县</option>
-					</select>
-					<select>
-						<option value="配送区域">配送区域</option>
-					</select>
-				</div>
-				<textarea name="" rows="" cols="" placeholder="详细地址"></textarea>
+			<form action="#" method="post">
+				<input id="mask_name" type="text" placeholder="姓名" class="on" />
+				<input id="mask_phone" type="text" placeholder="手机号" />
+				<input id="province" placeholder="省份/自治区"></input>
+				<input id="city" placeholder="城市/地区"></input>
+				<input id="district" placeholder="区/县"></input>
+				<textarea id="exact_add" name="" rows="" cols="" placeholder="详细地址"></textarea>
 				<input type="text" placeholder="邮政编码" />
 				<div class="bc">
-					<input type="button" value="保存" />
+					<input type="button" onclick="change_add()" value="保存" />
 					<input type="button" value="取消" />
 				</div>
 			</form>
@@ -416,10 +649,15 @@
 		</div>
 
 		</div>
+		<script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 
 </html>
 <script>
+
 	var d = [];
 	//  $("#id").html(data.code);
 	var vue = new Vue({
@@ -451,7 +689,7 @@
                     orderPrice: this.total,
                     detail: idList.substring(1),
                     userId: userId,
-					address: "暂无"
+					address: current_add,
 				};
 
                 $.ajax({

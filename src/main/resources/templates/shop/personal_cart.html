@@ -16,9 +16,22 @@
 	<script src="js/public.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/pro.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/cart.js" type="text/javascript" charset="utf-8"></script>
-
+	<script>
+        function onload(){
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true) {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                var userid = '';
+                for(var i = 0;i<arrCookie.length;i++){
+                    var arr = arrCookie[i].split("=");
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);
+                        break;}}}}
+	</script>
 </head>
-<body>
+<body onload="onload()">
 <div id="app">
 
 <!------------------------------head------------------------------>
@@ -104,7 +117,7 @@
 						</span>
 			</div>
 			<div class = "reg_c">
-				<a href="land.html" id="">登陆</a>
+				<a href="land.html" id="login">登陆</a>
 				<span>&nbsp;|&nbsp;</span>
 				<a href="registe.html">注册</a>
 			</div>
@@ -169,7 +182,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<div class="goOn" style="text-align: center;width: 500px;margin:15px; font-size: 16px">空空如也~<a href="index.html" style="color: #4685EC">去逛逛</a></div>
+	<div class="goOn" style="text-align: center;width: 500px;margin:15px; font-size: 16px" v-if="flag">空空如也~<a href="index.html" style="color: #4685EC">去逛逛</a></div>
 	<div class="tr clearfix" style="margin: 15px;font-size: 16px">
 		<!--<label class="fl" style="text-align: right;width: 200px;">-->
 			<!--<input class="checkAll" type="checkbox"/>-->
@@ -412,8 +425,8 @@
                 // },
                 success: function (result) {
                     console.log(result.extend.carts);
-                    vue.tableData = result.extend.carts
-
+                    vue.tableData = result.extend.carts;
+					vue.flag = false;
                 },
                 error : function() {
                     alert("异常！");
@@ -422,6 +435,7 @@
         },
         el: "#app",
         data: {
+            flag: true,
             checkedItems:[],
             tableData: [],
 			checkedNum:0,

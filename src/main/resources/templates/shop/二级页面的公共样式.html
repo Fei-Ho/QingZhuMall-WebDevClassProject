@@ -7,8 +7,22 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<!-- 二级页面的公共样式代码 -->
 	<link rel="stylesheet" href="css/common.css">
+	<script>
+        function onload(){
+            // 如果找到了索引，就代表cookie存在，
+            // 反之，就说明不存在。
+            if (true) {   var strCookie = document.cookie;
+                var arrCookie = strCookie.split(";");
+                var userid = '';
+                for(var i = 0;i<arrCookie.length;i++){
+                    var arr = arrCookie[i].split("=");
+                    if("userName"==arr[0]){
+                        userid = arr[1];
+                        $("#login").html(userid);
+                        break;}}}}
+	</script>
 </head>
-<body>
+<body onload="onload()">
 	<!-- header部分开始 -->
 	<div class="header">
 		<div class="header_c inner_c">
@@ -92,7 +106,7 @@
 					</span>
 				</div>
 				<div class = "reg_c">
-					<a href="#" id="">登陆</a>
+					<a href="#" id="login">登陆</a>
 					<span>&nbsp;|&nbsp;</span>
 					<a href="#">注册</a>
 				</div>
